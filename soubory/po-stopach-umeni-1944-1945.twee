@@ -38,7 +38,7 @@ Z Beethoven-Haus sem byl přivezen rukopis Symfonie č. 6.
 [[Zpět->Siegen, Německo]]
 
 
-:: Bonus {"position":"1150,900","size":"100,100"}
+:: Bonus - mapa vygenerovaná AI pro tuto hru {"position":"1150,900","size":"100,100"}
 <iframe src="https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories" width=100% height=950></iframe>
 [[Zpět->Závěr]]
 
@@ -238,14 +238,14 @@ Přijdeš do kavárny, kde v tuhle dobu obvykle vysedává Rose Valland. Spatř�
 >> (click-replace: ">>")[
 //Zase vy... Jaké argumenty pro mě máte dnes?// 
 > Říct jí o Neronově rozkazu
-> Říct jí o dole v Siegenu](click-replace: "> Říct jí o Neronově rozkazu")[
+> Říct jí o dole v Siegenu
+](click-replace: "> Říct jí o Neronově rozkazu")[
 //Slyšela jste o tomto dokumentu?// Vytáhneš kopii Neronova rozkazu. //Pokud si nepospíšíme, budou díla zničena. Možná dokonce zmizí i silnice a mosty, kterými bychom se k depozitářům dostali.// Prosebně se na Valland podíváš.
->> (replace: "> Říct jí o dole v Siegenu")[]](click-replace: ">>")[
+-- (replace: "> Říct jí o dole v Siegenu")[]](click-replace: "--")[
 Pohlédne na kopii a ustaraně se zamračí. //To je příšerné...// Chvíli usilovně přemýšlí a s nečitelným výrazem v obličeji si znovu a znovu čte Hitlerova slova. Nakonec se prudce zvedne. //Pojďte za mnou.// [[jít za Rose Valland]]](click-replace: "> Říct jí o dole v Siegenu")[(replace: "> Říct jí o Neronově rozkazu")[]
-//Mám pro vás dobré zprávy. Před pár dny jsme našli jeden depozitář umění v měděném dole v Německu. Usilovně se pracuje na dokumentaci, aby mohla být co nejdříve navrácena tam, kam patří. Byli bychom moc rádi, kdyby jste nám poskytla dokumentaci k dílům z Paříže. Určitě je chcete vidět zpátky v muzeu Jeu de Paume co nejdříve.// Prosebně se na Valland podíváš.
->>](click-replace: ">>")[
+//Mám pro vás dobré zprávy. Před pár dny jsme našli jeden depozitář umění v měděném dole v Německu. Usilovně se pracuje na dokumentaci, aby mohla být díla co nejdříve navrácena tam, kam patří. Proto bychom taky byli moc rádi, kdyby jste nám poskytla informace k umění z Paříže. Určitě je chcete vidět zpátky v muzeu Jeu de Paume co nejdříve.// Prosebně se na Valland podíváš.
+_](click-replace: "_")[
 Úsměv, který se jí na obličeji při tvé první větě objevil, se pomalu vytrácí. Vypadá ještě víc ustaraně, než při vašem prvním setkání. Po několikavteřinové reflexi kývne hlavou a zvedne se od stolu. [[jít za Rose Valland]]]
-
 
 
 :: Siegen, Německo {"position":"200,450","size":"100,100"}
@@ -830,7 +830,7 @@ Už je konec války, to znamená, že po pomoci s dokumentací se za několik m�
 
 V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům. >>](click-replace: ">>")[
 
-[[Zdroje]] [[Bonus]](link: "Bonus - mapa vygenerovaná AI podle této hry")[(goto-url: "https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories")](set: $End to true)]]
+[[Zdroje]] [[Bonus - mapa vygenerovaná AI pro tuto hru]](set: $End to true)]]
 
 
 :: blízký kamarád {"position":"725,275","size":"100,100"}
@@ -921,7 +921,7 @@ V této únikové hře budeš právě členem MFAA a tvým úkolem bude zachrán
 :: Úvodní stránka {"position":"275,50","size":"100,100"}
 <div class="title">(text-style:"underline")[''PO STOPÁCH UMĚNÍ 1944 -1945'']</div>
 
-* délka:
+* délka: 15 - 20 min
 
 <div class="small-text">Poznámky:
 * tato hra nemá špatný konec, má jen jednu variantu závěru, a to aby mohla zůstat historicky co nejpřesnější

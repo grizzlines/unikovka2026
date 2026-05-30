@@ -1,0 +1,1093 @@
+:: StoryTitle
+Po stopách umění 1944 - 1945
+
+
+:: StoryData
+{
+  "ifid": "758679E5-510B-4B97-B092-535A8AA073B3",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Úvodní stránka",
+  "tag-colors": {
+    "ERR": "blue"
+  },
+  "zoom": 1
+}
+
+
+:: Altaussee důl {"position":"600,600","size":"100,100"}
+(if: $Madonna and $Cycle and $Altarpiece is true)[(go-to: "Závěr")]
+(else:)[V dole najdete obrovkské množství děl - asi 6 500 a dalších 1 500 cenných předmětů. Podívej se na některé zblízka:
+[[Gentský oltář]] [[Madona z Brugg]] [[Vyšebrodský oltář]]
+[[Zpět->Altaussee, Rakousko]]]
+
+
+:: Altaussee, Rakousko {"position":"500,475","size":"100,100"}
+Když se blížíš k Altaussee, zjišťuješ, že skončila válka. Dorazíš tam, ale vstupy do dolu jsou zasypané.
+Zeptat se místních na důvod >>
+
+Zpřístupnit vstup >> (click-replace: "Zeptat se místních na důvod >>")[
+//Zdejší Gauleiter chtěl za každou cenu zničit obsah dolu, tak do něj nechal přivést bomby. Naštěstí jsme si toho my, kteří v dole pracujeme, všimli a odstranili jsme je. Potom jsme radši většinu vstupů odpálili, aby se zasypaly a nacisté se tam nedostali.//]
+(click-replace: "Zpřístupnit vstup >>")[Po ostranění sutin se s kolegy můžeš jít podívat do dolu. [[Pokračovat->Altaussee důl]]] [[Zpět->Křižovatka]] 
+
+
+:: Bonn {"position":"275,575","size":"100,100"}
+<img src="https://imslp.org/images/1/16/PMLP01595.jpg" width="100%" class="img">
+Z Beethoven-Haus sem byl přivezen rukopis Symfonie č. 6.
+
+[[Zpět->Siegen, Německo]]
+
+
+:: Bonus {"position":"1150,900","size":"100,100"}
+<iframe src="https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories" width=100% height=950></iframe>
+[[Zpět->Závěr]]
+
+
+:: Bruggy, Belgie {"position":"475,125","size":"100,100"}
+(if: $BrugesMadonna is not true)[Jsi v tomto městě kvůli velice významnému dílu - Madona z Brugg. Jdeš do kostela Panny Marie ujistit se, že je v pořádku.
+(click: "Madona z Brugg")[(text-style:"bold","underline")
+[Madona z Brugg] (1501-1504)
+Mramorová socha z doby renesance je první socha Michelangela Buonarrotiho, která byla odvezená z Itálie.
+
+<div class="text-col">[[navštívit Madonu]]</div>] <div class="text-col">[[Zpět->Křižovatka]] </div>](if: $BrugesMadonna is true)[(text-style:"bold","underline")[Madona z Brugg] (1501-1504)
+Mramorová socha z doby renesance je první socha Michelangela Buonarrotiho, která byla odvezená z Itálie.
+[[Zpět->Křižovatka]]]
+
+
+:: Cáchy {"position":"0,550","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Lotharkreuz-Domschatzkammer-Aachen-2026.jpg" class="img-left" width="32%"> V roce 1944 byla do Siegenu přivezena část obsahu klenotnice ''Katedrály Panny Marie v Cáchách''.
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Bust_of_Charlemagne.png" class="img-right" width="32%">
+<div class="text-col">Nejvýznamější mezi ukrytými předměty byly ''ostatky Karla Velikého'', který katedrálu na začátku 9. století nechal postavit, a ''Lotharův kříž''.</div>
+
+[[Zpět->Siegen, Německo]]
+
+
+:: Další tunely {"position":"450,750","size":"100,100"}
+Před několika hodinami už se našla díla, většina z nich sem byla přivezena z berlínského Muzea císaře Friedricha III. (set: $ArtMerkers to true)
+<img src="https://www.archives.gov/files/research/holocaust/images/111-SC-203453-5-xl.jpg" width="100%" class=img>
+Éduard Manet - //Ve skleníku//
+<img src="https://www.archives.gov/files/publications/prologue/1999/spring/merkers-durer-engravings-5757194.jpg" width="100%" class=img>
+dřevoryt od Albrechta Dürera
+[[Zpět->Merkers důl]]
+
+
+:: ERR {"position":"0,300","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Bundesarchiv_Bild_146-1977-030-23%2C_Minsk%2C_Einsatzstab_Reichsleiter_Rosenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled" width="100%" class="img">
+
+''(text-style:"underline")[Einsatzstab Reichsleiter Rosenberg]''
+Založená roku 1940, ERR byla organizace nacistické strany, která sloužila k přivlastňování si kulturního dědictví. Jejím velitelem byl vedoucí zahraničního úřadu NSDAP ''Alfred Rosenberg''. ERR pokračovala v konfiskaci vzácných knih, důležitých artefaktů a hodnotného majetku patřícího židům.
+
+
+
+:: Gentský oltář {"position":"575,725","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ghent_Altarpiece_Google_Art_Project.jpg/3840px-Ghent_Altarpiece_Google_Art_Project.jpg" class=img width=100%>
+
+''(text-style:"underline")[Gentský oltář]''<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Ghent_altarpiece_at_Altaussee.jpg" class=img-right width=62.5%>
+* 15. století - pozdní gotika
+* bratři ''van Eyckové''
+3,5 x 5 m veliký oltář z 12 panelů vznikl pro ''katedrálu sv. Bavona v Gentu'' v Belgii. Z té byl několikrát přemístěn a občas bylo pár panelů odcizeno, ale vždy se vrátily. Od roku 1940 do roku 1945 prostřídal 6 lokací - z Belgie do zámku v Pau, poté do Paříže, do Neuschwansteinu, a z Altaussee byl převezen do Mnichova (click: "Mnichova")[(Munich Central Collecting Point - tam se po válce díla zdokumentovala a posílala původnímu majiteli)] a zpátky do Gentu. (set: $Altarpiece to true)
+[[Zpět->Altaussee důl]] 
+
+
+:: Hermann Göring {"position":"0,200","size":"100,100"}
+
+
+<div class="img-text">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Hermann_G%C3%B6ring_by_Langhammer.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled">
+  <div>
+''(text-style:"underline")[Hermann Göring]''
+(1893 - 1946)
+Jakožto zástupce Hitlera a velitel Luftwaffe (německé válečné letectvo) měl Göring obrovskou moc, kterou zneužíval k přivlastňení si tisíců zkonfiskovaných uměleckých děl nacisty. Jeho soukromá sbírka se nacházela v honosném sídle, kde pobýval a užíval si přepychu.
+  </div>
+</div>
+
+
+:: Jet naproti kolegům, jestli něco nenašli {"position":"175,275","size":"100,100"}
+Ani po několika měsících se ti nedaří přesvědčit Rose Valland, aby ti předala informace o dílech, která byla odvezena nacisty. Máš pocit, že neděláš žádný pokrok, a tak se vydáš za kolegy se podívat, jestli na něco nepřišli.
+
+> Mluvit s kolegy
+(click-replace: "> Mluvit s kolegy")[kolegové: //Tak co, jak se ti daří?//
+> Vyhnout se otázce
+> Říct jim o neúspěchu u Valland](click-replace: "> Vyhnout se otázce")[
+//Jde to. Prý jste vy ale našli nějakou lokaci ukrytého umění, nebo snad ne?// 
+
+//Ano, v měděném dole v Siegenu, bylo to úplnou náhoudou! Za pár dnů se tam chystáme, až naše armáda obsadí město.//(replace: "> Říct jim o neúspěchu u Valland")[]
+>>
+(click-replace: ">>")[
+//To je skvělé! Také se tam přijdu podívat. Máte nějaké další novinky?//
+>>](click-replace: ">>")[
+//Ano... Hitler právě vydal Neronův rozkaz. Chce zničit všechno na území Německa, co by se nám mohlo hodit. Průmyslové a vojenské budovy, ale i cenné věci, takže všechno ukradené i neukradené umění. Také se bude těžší dostat kamkoliv v Německu, pokud zničí mosty.//(set: $NeroDecree to true)]](click-replace: "> Říct jim o neúspěchu u Valland")[//Moc ne, Rose Valland mi stále nedůvěřuje.// (replace: "> Vyhnout se otázce")[]
+
+//To je blbé. Musíš ty informace získat, hlavně teď když Hitler vydal Neronův rozkaz!//
+>>(click-replace: ">>")[
+//Jaký Neronův rozkaz??//
+>>](click-replace: ">>")[
+//Hitler nařídil, aby bylo všechno na území Německa co se nám může hodit zničeno. Takže i umění, protože je cenné, a samozřejmě silnice a mosty. Chce, abychom z výhry vůbec nic nezískali.//(set: $NeroDecree to true)]][[Zpět->Křižovatka]] 
+
+
+:: Kolín nad Rýnem {"position":"150,575","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Holzt%C3%BCr_von_St._Maria_im_Kapitol-0398.jpg" class="img-right" width="32%"> 
+<div class="text-col">Dřevěné dveře z 11. století s reliéfy o životě a zmrtvýchvstání Krista pochází z románského Kostela St. Maria im Kapitol v Kolíně nad Rýnem.
+
+[[Zpět->Siegen, Německo]]
+</div>
+
+
+:: Křižovatka {"position":"350,300","size":"100,100"}
+(if: $RoseValland is true)+(if: $BrugesMadonna is true)[(set: $date to "Březen 1945")] (if: $SiegenDone is true)[(set: $date to "Duben 1945")] (if: $MerkersDone is true)[(set: $date to "Květen 1945")]''(print: $date)''
+(if: $date is "Září 1944")[Spojencům se podařilo osvobodit Paříž a dále postupují ve Francii a Belgii.](if: $date is "Březen 1945")[Německo je obklíčeno z obou stran - Američané jsou u Rýna a Rudá armáda se blíží k Berlínu.
+Rose Valland už je dávno propuštěná - zjistilo se, že nacistům nepomáhala.] (if: $date is "Duben 1945")[Spojenci začínají osvobozovat koncentrační tábory, konec války se blíží.] (if: $date is "Květen 1945")[Hitler spáchal sebevraždu. Rudá armáda obsadila Berlín.]
+
+Zatím můžeš navštívit tato místa:
+[[Bruggy, Belgie]] [[Paříž, Francie]] (if: $date is "Březen 1945")+(unless: $NeroDecree is true)[[Jet naproti kolegům, jestli něco nenašli]] (if: $NeroDecree is true)[[Siegen, Německo]] (if: $date is "Duben 1945" or "Květen 1945")+(if: $RoseVallandDone is true)[[Neuschwanstein, Německo]](if: $date is "Duben 1945" or "Květen 1945")+(if: $RoseVallandDone is true)[[Merkers, Německo]]  (if: $NeuschwansteinDone is true)[[Altaussee, Rakousko]]
+
+
+:: Madona z Brugg {"position":"725,600","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Madonna_Michelangelo_Bruges_-_JPG2_%28cropped%29.jpg" class=img-right width=40%>''(text-style:"underline")[Madona z Brugg]''
+Významná socha z vrcholné renesance byla také nalezena v Altaussee. Celkem byla dvakrát odcizena - za napoleonských válek v roce 1794 a v září 1944. Po válce byla vrácena do bruggského kostela. (set: $Madonna to true)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Madonna_of_Bruges_Altaussee_%282%29.jpg/330px-Madonna_of_Bruges_Altaussee_%282%29.jpg" class=img width=50%>
+
+[[Zpět->Altaussee důl]] 
+
+
+:: Merkers důl {"position":"400,625","size":"100,100"}
+Přicházíš do dolu, kde na tebe čeká výtah, který tě doveze o několik stovek metrů níž. Trezor s říšským zlatem je označen jako //Místnost č. 8//.
+[[Místnost č. 8]] [[Další tunely]]
+[[Zpět->Merkers, Německo]]
+
+
+:: Merkers, Německo {"position":"350,450","size":"100,100"}
+(if: $ArtMerkers is not true and $GoldMerkers is not true)[Přicházíš do německého města Merkers čtyři dny po jeho obsazení americkou armádou. Podle místních bylo do zdejšího dolu přemístěno zlato z Berlína jako reakce na únorové bombardování města.
+Najít kolegy >>](click-replace: "Najít kolegy >>")[
+Když si tě všimnou, objeví se tvým kolegům úsměv na tváři. //Prý už konečně máš záznamy od Rose Valland! Hned jak to bude možné, půjdeme do Neuschwansteinu. My teď ale taky máme dobré zprávy!//
+>>](click-replace: ">>")[
+//Předevčírem se potvrdilo, že je v místním dole ukryté říšské zlato spolu s tím, co ukradli SS. Pokud je to většina jejich zásob, znamenalo by to rychlejší konec války. A nejen to, spolu s pokladem sem před pár týdny přivezli i umění! Pojď, musíme to tam jít zkontrolovat.//
+>>](click-replace: ">>")[(link: "Jít do dolu")[(go-to: "Merkers důl")]] (if: $ArtMerkers and $GoldMerkers is true)[9 dnů po tvém prvním příjezdu do Merkers jsou zlato i díla odvezena do Reichsbanku ve Frankfurtu. (set: $MerkersDone to true)
+[[Jít do dolu->Merkers důl]] ]
+[[Zpět->Křižovatka]] 
+
+
+:: Monte Cassino {"position":"0,400","size":"100,100"}
+Monte Cassino, Itálie 
+
+Benediktinský klášter je obsazený Němci. bombardovat nebo ne
+
+
+:: Místnost č. 8 {"position":"325,750","size":"100,100"}
+(set: $GoldMerkers to true) <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Schachtanlage_Merkers.jpg" width="100%" class=img>
+V 23 x 46 metrů velké místnosti vidíš různé podoby zlata, peníze, stříbro i platinu.
+[[Zpět->Merkers důl]] 
+
+
+:: Neuschwanstein, Německo {"position":"600,350","size":"100,100"}
+<img src="https://www.warhistoryonline.com/wp-content/uploads/sites/64/2014/03/photo11.jpg" width="100%" class=img> (if: $NeuschwansteinDone is true)[(link: "Podívat se po užitečných dokumentech")[(go to: "Podívat se po užitečných dokumentech)] [[Prozkoumat ukradená díla a majetek]]] (if: $date is "Duben 1945")[Tuto lokaci jste našli díky záznamům Rose Valland, spolu s dalšími místy na jihu Německa - Heilbronn, Baxheim, Hohenschwangau. Bohužel se tam zatím nedostaneš, tuto oblast mají stále pod kontrolou Němci. Doufáš, že se ji Spojencům podaří obsadit co nejdřív, s Neronovým rozkazem je totiž možné, že bude obsah Neuschwansteinu zničen.] (if: $date is "Květen 1945")+(unless: $NeuschwansteinArt and $NeuschwansteinDocu is true)[4. května přicházíš do pohádkového zámku Neuschwanstein. Uvnitř najdeš spousty právě zabalených děl, s toho si vyvodíš, že je nacisté právě vyváželi, když tato oblast byla obsazena. Jsou tu obrazy, vzácný nábytek a další poklady přivezené z Francie. [[Prozkoumat ukradená díla a majetek]] [[Podívat se po užitečných dokumentech]]] (if: $NeuschwansteinArt and $NeuschwansteinDocu is true)+(if: $NeuschwansteinDone is not true)[Spokojeně se vracíš z Neuschwansteinu. Tvá práce tam se povedla, ale musíš myslet na další depozitáře a co jim hrozí. Nedávno nalezeným místem je Bernterode, ale ty teď máš důležitější misi - jet do Rakouska. V Altaussee totiž nejspíš skladují hodně důležitá díla - prozradil to jeden nacista výměnou za bezpečnou cestu do Paříže.(set: $NeuschwansteinDone to true)]
+[[Zpět->Křižovatka]]
+
+
+:: Paříž, Francie {"position":"600,200","size":"100,100"}
+Jsi v Paříži. Máš tu tyto kontakty, které můžeš navštívit:
+[[blízký kamarád]] [[známý pracující v muzeu]] (if: $SiegenDone is true)[[Rose Valland->Rose Valland 2]]
+[[Zpět->Křižovatka]] 
+
+
+:: Podívat se po užitečných dokumentech {"position":"800,425","size":"100,100"}
+Jdeš se podívat do menších místností v zámku. Většina z nich je skoro prázdná, ale po chvíli vejdeš do prostoru, který už vypadá jako využívaná kancelář.
+>> (click-replace: ">>")[<img src="https://cdn.sanity.io/images/cctd4ker/production/6f443fde3c0680cb4d9537d58c676e6e412a53b8-760x611.jpg?w=3840&q=75&fit=max&auto=format" width="100%" class=img>
+Zde nacházíš katalogy s fotografiemi a záznamy děl. Tento velice cenný nález v místnosti uzamkneš, bude se ti hodit. (set: $NeuschwansteinDocu to true)]
+[[Zpět->Neuschwanstein, Německo]] 
+
+
+:: Prozkoumat ukradená díla a majetek {"position":"675,475","size":"100,100"}
+Spousta cenností pokrývá prostory zámku. Jsou tu nejenom díla z Jeu de Paume, ale i předměty ze sbírek významných židovských rodin, jako jsou například Rothschildové. U většiny děl vidíš to samé razítko: <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Stempel_einsatzstab_rr.png" width="80%" class=img>
+Všechno roztřídit, identifikovat a přepravit k původním majitelům bude nějakou dobu trvat. Víš ale, že Rose Valland bude mít velkou radost.
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Monuments_Men%2C_Neuschwanstein_Castle%2C_Germany%2C_1945.png" width="100%" class="img"> (set: $NeuschwansteinArt  to true)
+[[Zpět->Neuschwanstein, Německo]] 
+
+
+:: Rose Valland {"position":"975,150","size":"100,100"}
+<img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Rose_Valland.jpg" class="img-right" width="32%%">  <div class=text-col>Přicházíš k cele, ve které sedí žena středního věku. //Promiňte, jste Rose Valland?//
+>>(click-replace: ">>")[
+Podezíravě se na tebe podívá. //Ano.//
+>>](click-replace: ">>") [
+//A nevíte něco o dílech, která byla odvezena nacisty?//
+>>](click-replace: ">>") [
+//Samozřejmě, přece jsem jim pomáhala.// Řekne ironicky a odvrátí hlavu.
+
+> //Proč byste pomáhala nacistům? Nevážíte si kulturního dědictví vaší země?//
+> //Nemyslím si, že jste kolaborantka.//](click-replace: "> Proč byste pomáhala nacistům? Nevážíte si kulturního dědictví vaší země?")[
+//Proč byste pomáhala nacistům? Nevážíte si kulturního dědictví vaší země?//(replace: "> Nemyslím si, že jste kolaborantka.") [
+Znechuceně se na tebe podívá a dál už tě ignoruje.](set: $RoseValland to true)](click-replace: "> Nemyslím si, že jste kolaborantka.")[//Nemyslím si, že jste kolaborantka.//
+
+
+Prudce se na tebe otočí. //A co vlatně chcete?//
+
+> //Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.//
+> //Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.//(replace: "> Proč byste pomáhala nacistům? Nevážíte si kulturního dědictví vaší země?")[]]
+(click-replace: "> Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.")[
+//Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.//
+(replace: "> Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.") [//Stejně si vy američani chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje.](set: $RoseValland to true)]
+(click-replace: "> Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.")[//Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.//
+
+
+//Stejně si vy Američané chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje. (replace: "> Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.") [](set: $RoseValland to true)][[Zpět->zeptat se na umělecká díla]] </div>
+
+
+:: Rose Valland 2 {"position":"900,300","size":"100,100"}
+Přijdeš do kavárny, kde v tuhle dobu obvykle vysedává Rose Valland. Spatříš ji a přisedneš si. Bez výrazného překvapení zvedne hlavu.
+>> (click-replace: ">>")[
+//Zase vy... Jaké argumenty pro mě máte dnes?// 
+> Říct jí o Neronově rozkazu
+> Říct jí o dole v Siegenu](click-replace: "> Říct jí o Neronově rozkazu")[
+//Slyšela jste o tomto dokumentu?// Vytáhneš kopii Neronova rozkazu. //Pokud si nepospíšíme, budou díla zničena. Možná dokonce zmizí i silnice a mosty, kterými bychom se k depozitářům dostali.// Prosebně se na Valland podíváš.
+>> (replace: "> Říct jí o dole v Siegenu")[]](click-replace: ">>")[
+Pohlédne na kopii a ustaraně se zamračí. //To je příšerné...// Chvíli usilovně přemýšlí a s nečitelným výrazem v obličeji si znovu a znovu čte Hitlerova slova. Nakonec se prudce zvedne. //Pojďte za mnou.// [[jít za Rose Valland]]](click-replace: "> Říct jí o dole v Siegenu")[(replace: "> Říct jí o Neronově rozkazu")[]
+//Mám pro vás dobré zprávy. Před pár dny jsme našli jeden depozitář umění v měděném dole v Německu. Usilovně se pracuje na dokumentaci, aby mohla být co nejdříve navrácena tam, kam patří. Byli bychom moc rádi, kdyby jste nám poskytla dokumentaci k dílům z Paříže. Určitě je chcete vidět zpátky v muzeu Jeu de Paume co nejdříve.// Prosebně se na Valland podíváš.
+>>](click-replace: ">>")[
+Úsměv, který se jí na obličeji při tvé první větě objevil, se pomalu vytrácí. Vypadá ještě víc ustaraně, než při vašem prvním setkání. Po několikavteřinové reflexi kývne hlavou a zvedne se od stolu. [[jít za Rose Valland]]]
+
+
+
+:: Siegen, Německo {"position":"200,450","size":"100,100"}
+(if: $SiegenDone is not true)[Spolu s kolegy jdeš navštívit Hainer Stollen, měďený důl města Siegen, o kterém se nedávno zjistilo, že obsahuje umění skryté nacisty. Spojenci kvůli tomu právě obsadili město. Bohužel je zničené rozsáhlým bombardováním, a tak je nemožné se k dolu dostat autem.
+>>(click-replace: ">>")[
+Pokračujete pěšky. U vstupu do dolu vás zdraví lidé, kteří se tam během bombardování ukrývali. Pokračujete dovnitř dlouhou chodbou, kde sedí další lidé. Po nějaké chvíli dojdete k zamčeným dveřím.
+>>](click-replace: ">>")[
+Někdo vám otevře. Vstupujete do místnosti, která má asi 60 x 10 metrů a každičké místo je zaplněno dřevěnými bednami s obrazy, sochami a relikviemi z mnoha Německých měst.
+>>]
+(click-replace: ">>")[
+Podívej se na některé bedny zblízka: (set: $SiegenDone to true)
+[[Cáchy]] [[Bonn]] [[Kolín nad Rýnem]]]](if: $SiegenDone is true)[
+Spolu s kolegy jdeš navštívit měďený důl města Siegen, o kterém se nedávno zjistilo, že ukrývá umění konfiskované nacisty. Spojenci právě obsadili město. Bohužel je zničené rozsáhlým bombardováním, a tak je nemožné se k dolu dostat autem.
+
+Pokračujete pěšky. U vstupu do dolu vás zdraví lidé, kteří se tam během bombardování ukrývali. Pokračujete dovnitř dlouhou chodbou, kde sedí další lidé. Po nějaké chvíli dojdete k zamčeným dveřím.
+
+Někdo vám otevře. Vstupujete do místnosti, která má asi 60 x 10 metrů a každičké místo je zaplněno dřevěnými bednami s obrazy, sochami a relikviemi z mnoha Německých měst.
+
+Podívej se na některé bedny zblízka:
+[[Cáchy]] [[Bonn]] [[Kolín nad Rýnem]] Mimo to bylo v dole skladováno několik stovek obrazů od významných umělců, např. Cézanne, Rembrandt, Renoir, Van Gogh a další. Vedle uměleckých děl z německých muzeí se tu skladovaly i klenoty z Essenského chrámu a z katedrály v Trevíru.]
+
+[[Zpět->Křižovatka]]
+
+
+:: Untitled Passage {"position":"1325,775","size":"100,100"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nazi Art Repositories — Europe 1939–1945</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0f0e0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  font-family: 'Courier Prime', monospace;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Special Elite', serif;
+  color: #9a7c2a;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.subtitle {
+  color: #5a4a2a;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.map-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid rgba(154,124,42,0.3);
+  border-top: 5px solid #8c1a00;
+  box-shadow: 0 0 0 4px #0f0e0c, 0 8px 50px rgba(0,0,0,0.8);
+}
+
+svg#map { display: block; width: 100%; height: auto; }
+
+/* repo dots interactivity */
+.repo { cursor: pointer; }
+.repo circle.outer { transition: r 0.15s; }
+.repo:hover circle.outer { r: 8; }
+
+/* in-game star glow */
+@keyframes starPulse {
+  0%,100% { opacity: 0.25; r: 9; }
+  50%      { opacity: 0.5;  r: 13; }
+}
+.pulse { animation: starPulse 2.2s ease-in-out infinite; }
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: #140f08;
+  border: 1px solid #6a5218;
+  border-left: 3px solid #8c1a00;
+  color: #e8dfc8;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.78rem;
+  padding: 0.55rem 0.9rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  max-width: 240px;
+  line-height: 1.55;
+  z-index: 20;
+  border-radius: 1px;
+}
+.tooltip.show { opacity: 1; }
+.tooltip .tt-name  { color: #e8c860; font-weight: 700; display: block; margin-bottom: 0.15rem; font-size: 0.82rem; }
+.tooltip .tt-ctry  { color: #9a7c2a; font-size: 0.7rem; display: block; margin-bottom: 0.3rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.tooltip .tt-info  { color: #c8b890; font-size: 0.75rem; }
+
+/* Legend */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 2.5rem;
+  margin-top: 1.2rem;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid rgba(154,124,42,0.18);
+  max-width: 900px;
+  width: 100%;
+}
+.li { display: flex; align-items: center; gap: 0.55rem; font-size: 0.71rem; color: #8a7040; letter-spacing: 0.04em; }
+.li svg { flex-shrink: 0; }
+
+.map-note {
+  margin-top: 0.9rem;
+  font-size: 0.65rem;
+  color: #3a2e18;
+  letter-spacing: 0.08em;
+  text-align: center;
+  max-width: 900px;
+}
+</style>
+</head>
+<body>
+
+<h1>Nazi Art Repositories — Europe 1939–1945</h1>
+<p class="subtitle">20 major known locations · hover for details</p>
+
+<div class="map-wrap" id="mapWrap">
+  <div class="tooltip" id="tt"></div>
+
+  <svg id="map" viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Ocean -->
+    <rect width="900" height="580" fill="#7a9aaa"/>
+
+    <!-- ── LAND ── simplified but recognisable shapes ── -->
+
+    <!-- Iberian -->
+    <path d="M85,390 L68,365 L60,335 L65,305 L82,285 L115,272 L155,268 L190,278 L205,300 L210,328 L198,358 L178,378 L148,390 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+    <!-- Portugal strip -->
+    <path d="M85,390 L68,365 L60,335 L65,305 L82,285 L98,282 L102,298 L100,328 L108,362 L118,382 Z" fill="#bfaf72" stroke="#9a8048" stroke-width="0.5"/>
+
+    <!-- France -->
+    <path d="M158,238 L198,225 L240,228 L272,248 L280,272 L265,298 L248,320 L218,332 L198,355 L178,373 L158,370 L148,345 L152,315 L168,292 L162,265 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- UK + Ireland -->
+    <path d="M145,158 L162,148 L180,152 L194,170 L190,192 L175,208 L158,212 L143,200 L136,182 L138,165 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+    <path d="M145,158 L152,142 L166,136 L178,144 L180,152 L162,148 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="0.5"/>
+    <path d="M115,174 L130,167 L140,178 L135,192 L120,194 L110,184 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Benelux -->
+    <path d="M215,195 L240,188 L268,192 L290,205 L295,220 L280,232 L258,235 L235,230 L218,218 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Germany -->
+    <path d="M268,190 L318,182 L355,188 L378,204 L380,232 L364,260 L338,274 L305,280 L274,266 L262,246 L264,220 L280,206 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Denmark -->
+    <path d="M278,158 L295,150 L310,142 L325,150 L322,168 L308,172 L292,165 L280,162 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Norway/Sweden -->
+    <path d="M292,148 L298,118 L312,95 L335,75 L362,65 L390,68 L410,85 L415,110 L408,138 L388,158 L362,170 L338,174 L315,168 L305,158 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+    <path d="M362,65 L395,58 L422,68 L435,92 L430,120 L418,142 L408,138 L415,110 L410,85 L390,68 Z" fill="#c2b272" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Finland -->
+    <path d="M422,68 L452,52 L482,48 L506,58 L515,80 L510,105 L494,120 L468,130 L445,122 L430,108 L435,92 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Poland -->
+    <path d="M378,204 L422,198 L460,204 L472,222 L465,248 L448,260 L418,265 L390,258 L370,242 L368,222 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Czech/Slovakia -->
+    <path d="M364,260 L398,258 L432,260 L448,270 L440,285 L418,290 L388,288 L364,278 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Austria -->
+    <path d="M330,274 L365,270 L388,275 L398,288 L384,298 L356,302 L330,295 L318,282 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Switzerland -->
+    <path d="M270,270 L298,264 L320,270 L324,284 L310,292 L282,290 L268,280 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Italy -->
+    <path d="M270,298 L298,290 L324,284 L340,298 L350,322 L358,350 L350,378 L334,402 L318,418 L305,420 L296,408 L300,385 L310,360 L314,338 L308,315 L290,305 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+    <path d="M305,435 L322,428 L336,434 L338,445 L326,452 L310,450 L302,440 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Hungary -->
+    <path d="M390,285 L420,280 L448,288 L455,305 L440,318 L415,322 L390,315 L378,300 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Yugoslavia/Balkans -->
+    <path d="M350,298 L380,300 L415,322 L428,348 L420,372 L404,392 L380,398 L358,388 L340,368 L338,344 L344,320 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Romania -->
+    <path d="M448,288 L492,284 L516,300 L522,325 L508,348 L480,358 L455,350 L438,335 L435,314 L440,298 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Baltics/Belarus -->
+    <path d="M420,158 L460,150 L496,155 L518,172 L520,195 L504,210 L474,218 L448,212 L424,200 L418,180 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Ukraine/W Russia -->
+    <path d="M496,155 L548,142 L602,150 L642,170 L650,205 L638,238 L608,255 L570,260 L536,250 L514,235 L510,210 L520,195 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- Greece -->
+    <path d="M396,398 L420,392 L438,402 L440,420 L428,435 L410,438 L396,425 Z" fill="#c8b87a" stroke="#9a8048" stroke-width="1"/>
+
+    <!-- N Africa coast strip -->
+    <rect x="60" y="450" width="520" height="25" rx="2" fill="#d4c48a" stroke="#9a8048" stroke-width="0.5"/>
+
+    <!-- ── SUBTLE GRID ── -->
+    <g stroke="#9a8a5a" stroke-width="0.3" opacity="0.2">
+      <line x1="0" y1="145" x2="900" y2="145"/>
+      <line x1="0" y1="290" x2="900" y2="290"/>
+      <line x1="0" y1="435" x2="900" y2="435"/>
+      <line x1="180" y1="0" x2="180" y2="580"/>
+      <line x1="360" y1="0" x2="360" y2="580"/>
+      <line x1="540" y1="0" x2="540" y2="580"/>
+      <line x1="720" y1="0" x2="720" y2="580"/>
+    </g>
+
+    <!-- ── COUNTRY LABELS ── -->
+    <g font-family="Courier Prime,monospace" fill="#7a6232" font-size="9" opacity="0.65" text-anchor="middle">
+      <text x="172" y="300">FRANCE</text>
+      <text x="320" y="232">GERMANY</text>
+      <text x="135" y="340">SPAIN</text>
+      <text x="162" y="182">ENGLAND</text>
+      <text x="362" y="108">NORWAY</text>
+      <text x="408" y="108">SWEDEN</text>
+      <text x="418" y="232">POLAND</text>
+      <text x="404" y="276">CZECH.</text>
+      <text x="354" y="289">AUS.</text>
+      <text x="316" y="358">ITALY</text>
+      <text x="478" y="320">ROMANIA</text>
+      <text x="238" y="212">BELG.</text>
+      <text x="570" y="205">UKRAINE</text>
+    </g>
+
+    <!-- ═══════════════════════════════════════════════════
+         REPOSITORY MARKERS
+         ═══════════════════════════════════════════════════ -->
+
+    <!-- ── IN-GAME: gold stars with name labels ── -->
+
+    <!-- SIEGEN ~51.9°N 8.0°E -->
+    <g class="repo ingame"
+       data-name="Siegen"
+       data-country="Germany"
+       data-info="Copper mine used to store art from Aachen Cathedral, Cologne, and other Rhineland collections. Discovered by US forces, April 1945.">
+      <circle class="pulse" cx="282" cy="243" r="10" fill="rgba(232,200,80,0.22)"/>
+      <polygon points="282,235 283.9,240.8 290,240.8 285.1,244.2 286.9,250 282,246.5 277.1,250 278.9,244.2 274,240.8 280.1,240.8" fill="#e8c840" stroke="#9a7020" stroke-width="0.8"/>
+      <text x="293" y="246" font-family="Special Elite,serif" font-size="11" fill="#1a1208" font-weight="bold">Siegen</text>
+    </g>
+
+    <!-- MERKERS ~50.6°N 10.2°E -->
+    <g class="repo ingame"
+       data-name="Merkers"
+       data-country="Germany"
+       data-info="Kaiseroda salt mine. Held Reichsbank gold reserves and hundreds of artworks from Berlin museums. Discovered by US 3rd Army, April 1945.">
+      <circle class="pulse" cx="310" cy="258" r="10" fill="rgba(232,200,80,0.22)"/>
+      <polygon points="310,250 311.9,255.8 318,255.8 313.1,259.2 314.9,265 310,261.5 305.1,265 306.9,259.2 302,255.8 308.1,255.8" fill="#e8c840" stroke="#9a7020" stroke-width="0.8"/>
+      <text x="321" y="261" font-family="Special Elite,serif" font-size="11" fill="#1a1208" font-weight="bold">Merkers</text>
+    </g>
+
+    <!-- NEUSCHWANSTEIN ~47.6°N 10.75°E -->
+    <g class="repo ingame"
+       data-name="Neuschwanstein"
+       data-country="Germany (Bavaria)"
+       data-info="Bavarian castle used as major ERR depot. Held 21,000+ objects looted from France including works from Jewish collections. Discovered May 1945.">
+      <circle class="pulse" cx="322" cy="279" r="10" fill="rgba(232,200,80,0.22)"/>
+      <polygon points="322,271 323.9,276.8 330,276.8 325.1,280.2 326.9,286 322,282.5 317.1,286 318.9,280.2 314,276.8 320.1,276.8" fill="#e8c840" stroke="#9a7020" stroke-width="0.8"/>
+      <text x="333" y="282" font-family="Special Elite,serif" font-size="11" fill="#1a1208" font-weight="bold">Neuschwanstein</text>
+    </g>
+
+    <!-- ALTAUSSEE ~47.6°N 13.8°E -->
+    <g class="repo ingame"
+       data-name="Altaussee"
+       data-country="Austria"
+       data-info="Salt mine in the Austrian Alps. Hitler's personal repository for the planned Führermuseum. Held 6,500+ works including the Ghent Altarpiece. Local miners defused Nazi demolition charges to save the art.">
+      <circle class="pulse" cx="358" cy="283" r="10" fill="rgba(232,200,80,0.22)"/>
+      <polygon points="358,275 359.9,280.8 366,280.8 361.1,284.2 362.9,290 358,286.5 353.1,290 354.9,284.2 350,280.8 356.1,280.8" fill="#e8c840" stroke="#9a7020" stroke-width="0.8"/>
+      <text x="369" y="286" font-family="Special Elite,serif" font-size="11" fill="#1a1208" font-weight="bold">Altaussee</text>
+    </g>
+
+    <!-- ── OTHER MAJOR REPOSITORIES (red dots) ── -->
+
+    <!-- Jeu de Paume, Paris ~48.9°N 2.3°E -->
+    <g class="repo"
+       data-name="Jeu de Paume — Paris"
+       data-country="France"
+       data-info="Central ERR sorting depot in occupied Paris. Rose Valland secretly documented thousands of works passing through here. Over 20,000 objects processed 1940–44.">
+      <circle class="outer" cx="200" cy="254" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="200" cy="254" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Berlin ~52.5°N 13.4°E -->
+    <g class="repo"
+       data-name="Berlin"
+       data-country="Germany"
+       data-info="Flak towers and zoo bunkers stored Kaiser Friedrich Museum collections. Much was evacuated to mines before the Soviet advance. Berlin was also a major ERR administrative centre.">
+      <circle class="outer" cx="348" cy="204" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="348" cy="204" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Munich ~48.1°N 11.6°E -->
+    <g class="repo"
+       data-name="Munich"
+       data-country="Germany"
+       data-info="Major Nazi cultural centre and collection point. Central depot for art destined for the Führermuseum in Linz. Göring's collection passed through here.">
+      <circle class="outer" cx="330" cy="268" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="330" cy="268" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Berchtesgaden ~47.6°N 13.0°E -->
+    <g class="repo"
+       data-name="Berchtesgaden"
+       data-country="Germany (Bavaria)"
+       data-info="Hitler's mountain retreat area. Large cache of looted art stored nearby, including parts of Göring's personal collection. Discovered by US forces May 1945.">
+      <circle class="outer" cx="344" cy="285" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="344" cy="285" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Heilbronn mine ~49.1°N 9.2°E -->
+    <g class="repo"
+       data-name="Heilbronn Salt Mine"
+       data-country="Germany"
+       data-info="Large salt mine used to store Staatsgalerie Stuttgart collections and other regional German museum holdings. One of the major mine repositories in SW Germany.">
+      <circle class="outer" cx="298" cy="256" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="298" cy="256" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Schloss Neuschwanstein area / Hohenschwangau -->
+    <!-- Already covered by ingame marker -->
+
+    <!-- Laufen / Buxheim, Bavaria ~47.9°N 10.3°E -->
+    <g class="repo"
+       data-name="Buxheim Monastery"
+       data-country="Germany (Bavaria)"
+       data-info="Bavarian monastery used to store over 1,000 objects looted by the ERR, including furniture and decorative arts from French châteaux.">
+      <circle class="outer" cx="316" cy="276" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="316" cy="276" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Bruges ~51.2°N 3.2°E -->
+    <g class="repo"
+       data-name="Bruges (Church of Our Lady)"
+       data-country="Belgium"
+       data-info="Michelangelo's Madonna of Bruges was looted by the Nazis in 1944 — one of the few works taken outside Italy during his lifetime. Recovered from Altaussee in 1945.">
+      <circle class="outer" cx="230" cy="218" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="230" cy="218" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Amsterdam ~52.4°N 4.9°E -->
+    <g class="repo"
+       data-name="Amsterdam"
+       data-country="Netherlands"
+       data-info="Occupied Netherlands was a major source of looted art. The ERR seized thousands of works from Jewish collections. The Mühlmann Task Force operated extensively here.">
+      <circle class="outer" cx="248" cy="204" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="248" cy="204" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Vienna ~48.2°N 16.4°E -->
+    <g class="repo"
+       data-name="Vienna"
+       data-country="Austria"
+       data-info="Major administrative centre for art looting in Austria and Eastern Europe. The Kunsthistorisches Museum and private Jewish collections were systematically stripped after the 1938 Anschluss.">
+      <circle class="outer" cx="372" cy="272" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="372" cy="272" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Cracow ~50.0°N 19.9°E -->
+    <g class="repo"
+       data-name="Kraków — Wawel Castle"
+       data-country="Poland"
+       data-info="Governor-General Hans Frank installed himself in Wawel Castle and used it to store looted Polish treasures, including Leonardo da Vinci's Lady with an Ermine.">
+      <circle class="outer" cx="430" cy="244" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="430" cy="244" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Schloss Weesenstein, Saxony ~50.9°N 13.9°E -->
+    <g class="repo"
+       data-name="Schloss Weesenstein"
+       data-country="Germany (Saxony)"
+       data-info="Saxon castle used to store the famous Dresden Gallery collections, evacuated from Dresden ahead of Allied bombing. The paintings were later found by Soviet troops.">
+      <circle class="outer" cx="350" cy="222" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="350" cy="222" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Quedlinburg ~51.8°N 11.1°E -->
+    <g class="repo"
+       data-name="Quedlinburg"
+       data-country="Germany"
+       data-info="A US soldier stole the Quedlinburg Treasures — medieval church relics and manuscripts — from a mine here in 1945. They were not recovered until the 1990s.">
+      <circle class="outer" cx="320" cy="218" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="320" cy="218" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Schloss Thalheim / Linz area, Austria ~48.3°N 14.3°E -->
+    <g class="repo"
+       data-name="Linz (Führermuseum site)"
+       data-country="Austria"
+       data-info="Hitler's planned Führermuseum was to be built in his hometown Linz. Thousands of works were earmarked and collected specifically for it. The museum was never built.">
+      <circle class="outer" cx="360" cy="268" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="360" cy="268" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Bonn ~50.7°N 7.1°E — from the game -->
+    <g class="repo"
+       data-name="Bonn (Beethoven-Haus)"
+       data-country="Germany"
+       data-info="Beethoven's manuscript of Symphony No. 6 was taken to Siegen from the Beethoven-Haus in Bonn. The house itself survived the war largely intact.">
+      <circle class="outer" cx="272" cy="238" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="272" cy="238" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Aachen ~50.8°N 6.1°E — from the game -->
+    <g class="repo"
+       data-name="Aachen Cathedral Treasury"
+       data-country="Germany"
+       data-info="Part of the Aachen Cathedral treasury — including Charlemagne's relics and the Lothar Cross — was evacuated to Siegen in 1944 for protection from Allied bombing.">
+      <circle class="outer" cx="260" cy="232" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="260" cy="232" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Monte Cassino ~41.5°N 13.8°E -->
+    <g class="repo"
+       data-name="Monte Cassino"
+       data-country="Italy"
+       data-info="German paratroopers controversially moved art from the Monte Cassino monastery to the Vatican and then to Germany in 1943, claiming to protect it. Much was recovered after the war.">
+      <circle class="outer" cx="320" cy="388" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="320" cy="388" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Florence ~43.8°N 11.2°E -->
+    <g class="repo"
+       data-name="Florence"
+       data-country="Italy"
+       data-info="The Nazis systematically looted artworks from Florence before retreating in 1944. The Uffizi collections were partially evacuated but significant works were stolen, some not recovered.">
+      <circle class="outer" cx="305" cy="345" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="305" cy="345" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- Schloss Thürnthal, Lower Austria ~48.4°N 15.9°E -->
+    <g class="repo"
+       data-name="Schloss Immendorf"
+       data-country="Austria"
+       data-info="Austrian castle used to store Klimt paintings looted from the Lederer family. The SS burned the castle in May 1945 — several Klimt masterworks were destroyed in the fire.">
+      <circle class="outer" cx="368" cy="265" r="6" fill="#8c1a00" stroke="#e04020" stroke-width="1.2" opacity="0.92"/>
+      <circle cx="368" cy="265" r="2.5" fill="#f06040" opacity="0.9"/>
+    </g>
+
+    <!-- ── COMPASS ROSE ── -->
+    <g transform="translate(820,52)" font-family="Courier Prime,monospace" fill="#7a6232" font-size="8">
+      <circle r="18" fill="rgba(200,184,120,0.3)" stroke="#9a8048" stroke-width="0.8"/>
+      <polygon points="0,-14 2,0 0,14 -2,0" fill="#8c1a00" opacity="0.8"/>
+      <polygon points="-14,0 0,2 14,0 0,-2" fill="#7a6232" opacity="0.7"/>
+      <text x="0" y="-17" text-anchor="middle" font-size="7" fill="#4a3a20">N</text>
+    </g>
+
+    <!-- ── TITLE BLOCK ── -->
+    <rect x="8" y="540" width="350" height="34" fill="rgba(20,16,8,0.55)" rx="1"/>
+    <text x="16" y="555" font-family="Special Elite,serif" font-size="10" fill="#9a7c2a" letter-spacing="1">NAZI ART REPOSITORIES — EUROPE 1939–1945</text>
+    <text x="16" y="568" font-family="Courier Prime,monospace" font-size="7.5" fill="#5a4a2a" letter-spacing="0.5">Approx. locations · not exhaustive · for reference only</text>
+
+  </svg>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="li">
+    <svg width="14" height="14" viewBox="0 0 14 14">
+      <polygon points="7,1 8.3,5.1 12.5,5.1 9.2,7.6 10.5,11.8 7,9.2 3.5,11.8 4.8,7.6 1.5,5.1 5.7,5.1" fill="#e8c840" stroke="#9a7020" stroke-width="0.8"/>
+    </svg>
+    Locations featured in the game
+  </div>
+  <div class="li">
+    <svg width="14" height="14" viewBox="0 0 14 14">
+      <circle cx="7" cy="7" r="5.5" fill="#8c1a00" stroke="#e04020" stroke-width="1"/>
+      <circle cx="7" cy="7" r="2.2" fill="#f06040"/>
+    </svg>
+    Other major repositories
+  </div>
+  <div class="li">
+    <svg width="20" height="10" viewBox="0 0 20 10">
+      <rect width="20" height="10" rx="1" fill="#c8b87a" stroke="#9a8048" stroke-width="0.8"/>
+    </svg>
+    Territory under Nazi control at peak, 1942
+  </div>
+</div>
+
+<p class="map-note">Hover over any marker for details · Map is schematic, not to precise scale</p>
+
+<script>
+const tt = document.getElementById('tt');
+const wrap = document.getElementById('mapWrap');
+
+document.querySelectorAll('.repo').forEach(el => {
+  el.addEventListener('mouseenter', function(e) {
+    tt.innerHTML =
+      '<span class="tt-name">' + this.dataset.name + '</span>' +
+      '<span class="tt-ctry">' + this.dataset.country + '</span>' +
+      '<span class="tt-info">'  + this.dataset.info  + '</span>';
+    tt.classList.add('show');
+    positionTip(e);
+  });
+  el.addEventListener('mousemove', positionTip);
+  el.addEventListener('mouseleave', () => tt.classList.remove('show'));
+});
+
+function positionTip(e) {
+  const rect = wrap.getBoundingClientRect();
+  let x = e.clientX - rect.left + 14;
+  let y = e.clientY - rect.top  + 14;
+  // keep inside wrapper
+  const tw = tt.offsetWidth  || 220;
+  const th = tt.offsetHeight || 80;
+  if (x + tw > rect.width  - 8) x = e.clientX - rect.left - tw - 10;
+  if (y + th > rect.height - 8) y = e.clientY - rect.top  - th - 10;
+  tt.style.left = x + 'px';
+  tt.style.top  = y + 'px';
+}
+</script>
+</body>
+</html>
+
+
+:: Vyšebrodský oltář {"position":"700,725","size":"100,100"}
+''(text-style:"underline")[Vyšebrodský cyklus]'' <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Vy%C5%A1ebrodsk%C3%BD_cyklus_-_Zv%C4%9Bstov%C3%A1n%C3%AD_P._Marii%2C_N%C3%A1rodn%C3%AD_galerie_v_Praze.jpg" class="img-right" width="50%">
+* polovina 14. století
+* ''Mistr Vyšebrodského oltáře'' a spolupracovníci
+Vyšebrodský oltář je tvořen ''devíti deskovými malbami'', které zobrazují život a zmrtvýchvstání Krista. Je to významná gotická památka, proto ho Hitler chtěl mít ve svém Führermuseu v Linci. Na obrázku je //Zvěstování Panně Marii//. (set: $Cycle to true)
+[[Zpět->Altaussee důl]] 
+
+
+:: Zdroje {"position":"0,0","size":"100,100"}
+https://artsandculture.google.com/story/world-war-ii-looted-art-turning-history-into-justice-u-s-national-archives/PQXxtIcpKuJmJw?hl=en
+
+https://www.dw.com/en/monuments-men-tracking-looted-treasures/a-17218246
+
+https://www.smithsonianmag.com/history/true-story-monuments-men-180949569/
+
+https://www.artandobject.com/news/how-most-precise-bombing-run-wwii-saved-florences-masterpieces
+
+https://www.goticatoscana.eu/en/portfolio/the-price-of-freedom-the-liberation-of-florence-august-1944/
+
+https://www.monumentsmenandwomenfnd.org/monuments-men-and-women/rose-vallandhttps://jeudepaume.org/a-propos/histoire/rose-valland/
+
+https://www.historicalsites.se/countries/france/paris-lvitan/
+
+https://www.messynessychic.com/2015/10/08/inside-the-paris-department-store-where-nazis-shopped-for-stolen-jewish-goods/
+
+https://www.messynessychic.com/2025/05/14/the-artful-spy-who-stopped-hitler-from-emptying-the-louvre/
+
+https://text-message.blogs.archives.gov/2015/08/25/monuments-men-april-1945-siegen/
+
+https://www.iereus.wz.cz/pamatky/aachen_dom.html
+
+https://www.archives.gov/publications/prologue/1999/spring/nazi-gold-merkers-mine-treasure.html
+
+https://www.metmuseum.org/perspectives/provenance-research-james-rorimer-neuschwanstein-castle-archives
+
+https://www.stoplusjednicka.cz/ukradene-poklady-legendarni-obrazy-ktere-uz-nikdo-nemel-videt
+
+[[Zpět->Závěr]] 
+
+
+:: Závěr {"position":"875,750","size":"100,100"}
+(if: $End is true)[''Gratuluji!''
+
+Už je konec války, to znamená, že po pomoci s dokumentací se za několik měsíců vracíš domů, ke své práci v muzeu, kde tě pravděpodobně povýší. Díky tvé pomoci se nalezlo spousta depozitářů v několika zemích Evropy. Jen v Německu jich bylo kolem 1 500.
+
+V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům.
+
+(link: "Zdroje")[(go-to: "Zdroje")] (link: "Bonus - mapa vygenerovaná AI podle této hry")[(goto-url: "https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories")]](else:)[(text-style:"fade-in-out")[''Gratuluji!'']
+
+Už je konec války, to znamená, že po pomoci s dokumentací se za několik měsíců vracíš domů, ke své práci v muzeu, kde tě pravděpodobně povýší. Díky tvé pomoci se nalezlo spousta depozitářů v několika zemích Evropy. Jen v Německu jich bylo kolem 1 500. >>(click-replace: ">>")[
+
+V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům. >>](click-replace: ">>")[
+
+[[Zdroje]] [[Bonus]](link: "Bonus - mapa vygenerovaná AI podle této hry")[(goto-url: "https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories")](set: $End to true)]]
+
+
+:: blízký kamarád {"position":"725,275","size":"100,100"}
+Promluv si s kamarádem >>
+(click-replace: "Promluv si s kamarádem >>") [(if: $date is "Září 1944")[kamarád: //Víš, co se stalo ve Florencii na začátku srpna? Nacisté v noci z 3. na 4. zničili všechny mosty ve městě kromě jednoho - Ponte Vecchio. Asi se líbil Hitlerovi. Naštěstí byla Florencie před pár dny osvobozena Spojenci.//](if: $date is "Březen 1945" or "Duben 1945")[kamarád: //V polovině února bombardovali Britové a Američané Drážďany jako pomoc sovětské ofenzivě. Nejenže zemřelo plno lidí, ale centrum města shořelo kvůli velké koncetraci bombardování.//](if: $date is "Květen 1945")[kamarád: //Při ústupu německých vojsk z Rakouska shořel zámek Immendorf, kde Němci skladovali umění. Díla z některých vídeňských muzeí a soukromých sbírek, včetně kusů od Gustva Klimta, byla zničena.//]
+][[Zpět->Paříž, Francie]] 
+
+
+:: info {"position":"0,100","size":"100,100"}
+V roce 1943 se Göring rozhodl část sbírky převézt do úkrytu v solném dole u Altaussee ve Štýrsku. Tato umělecká díla byla v roce 1945 zajištěna spojenci a nákladními automobily převezena do centrálního sběrného místa (Central Collecting Point) v Mnichově, kde byla umístěna v bývalých administrativních budovách NSDAP a budově Führerbau.
+Druhá část sbírky zůstala na Carinhallu. V lednu 1945 rozhodl Göring o jejím převozu zvláštními vlaky do Berchtesgadenu, kde měla být ukryta v tunelech. Umělecké poklady pak byly vyloženy a umístěny do protileteckého krytu.
+
+elle communique aux Alliés les noms des dépôts allemands et autrichiens (Altaussee, Buxheim, Neuschwanstein-Füssen, Nikolsburg, etc.)
+
+
+:: jít za Rose Valland {"position":"1025,275","size":"100,100"}
+Následuješ Rose Valland až k místu, kde pravděpodobně bydlí. Pustí tě do bytu a zmizí do další místnosti. Když se vrací, v rukou drží jakési papíry s deníkem.
+>>(click-replace: ">>")[
+//To jsou všechny mé záznamy. Nacisté mě nechali pracovat jako kurátorka v Jeu de Paume, asi jsem nevypadala jako někdo, kdo by manévroval proti nim. Nevěděli ale, že rozumím němčině a zapisuju si všechno ohledně děl. Kam je odvážejí, jaká je jejich plánovaná konečná destinace... O tom většinou rozhodoval Göring.// Při vyslovení tohoto jména se zašklebí.
+>>](click-replace: ">>")[
+//Do Jeu de Paume přišel přesně dvacetjednakrát. Prohlížel si díla a rozhodoval, která půjdou do jeho soukromé sbírky a která jsou pro Hitlera. Ten totiž plánoval Führermuseum - obrovské muzeum v Linci, kde chtěl do roku 1950 postavit nové město.//
+>>](click-replace: ">>")[
+//Tam mělo být všechno umění, které nepovažoval za „zvrhlé“. Zvrhlá pro něj byla celá avantgarda. Spoustu moderních obrazů nechal spálit.// Hořce se zasměje.
+>>](click-replace: ">>")[
+Po chvilce váhání otevře deník a položí ho na stůl. //To jsou mé záznamy. Název děl, kdy je kam odvezli. Doufám, že s tím budete dobře zacházet a pomůže vám to.// Vyprovodí tě před budovu a krátce se s tebou rozloučí.
+[[Zpět->Paříž, Francie]] (set: $RoseVallandDone to true)]
+
+
+:: navštívit Madonu {"position":"525,0","size":"100,100"}
+Jsi v kostele, ale Madonu nemůžeš najít. V tu chvíli zahlédneš kněze.
+Mluvit s knězem >> (click-replace: "Mluvit s knězem >>")[
+//Promiňte, kde tady máte Madonu z Brugg?//
+>>](click-replace: ">>")[
+Na obličeji se mu objeví temný výraz. //Vy o tom nevíte? Před pár dny nám ji ukradli nacisté, když ustupovali před Spojenci. Prostě nedokážou odejít v klidu. Na některých místech je to ale horší. Víte co se teď stalo ve Varšavě, že ano?//
+> //Ano//
+> //Ne//
+(set: $BrugesMadonna to true)](click-replace: "> Ano")[
+//Ano, je to katastrofa.// 
+
+Smutně pokývá hlavou, popřeje ti hodně štěstí a vzdálí se. (replace: "> Ne")[]] (click-replace: "> Ne")[//Nevím, copak se stalo?// Zeptáš se ustaraně.
+
+//Je to katastrofa. Nestačilo jim, že záměrně zničili skoro celé město, dynamitovali dokonce i Královský hrad ze 16. století!// Rozrušeně zakroutí hlavou, popřeje ti hodně štěstí a vzdálí se.(replace: "> Ano")[]]
+[[Zpět->Bruggy, Belgie]] 
+
+
+:: zeptat se na majetek {"position":"850,25","size":"100,100"}
+Jen v Paříži bylo vyloupeno 38 000 židovských domů. Starala se o to hlavně organizace EER. Získaný nábytek a cennosti skladovali v obchodním domě Lévitan než byly prodány Němcům. Lévitan také sloužil jako pracovní tábor pro židy, kteří tam třídili, zapisovali a opravovali ukradený majetek. Celkem byly v Paříži vytvořeny tři takové tábory.
+(click: "EER")[
+''(text-style:"underline")[Einsatzstab Reichsleiter Rosenberg]''
+Založená roku 1940, ERR byla jedna z organizací nacistické strany, které sloužily k přivlastňování si kulturního dědictví ze zemí okupových nacisty. Jejím velitelem byl Alfred Rosenberg. ERR konfiskovala mimo jiné vzácné knihy, důležité artefakty a hodnotný majetek patřící židům.
+]
+<img src="https://www.messynessychic.com/wp-content/uploads/2015/10/levitan31.jpg" width="100%" class="img">
+
+[[Zpět->známý pracující v muzeu]] 
+
+
+:: zeptat se na umělecká díla {"position":"850,150","size":"100,100"}
+(if: $RoseValland is not true)[známý: //Muzeum Jeu de Paume bylo třídícím a skladovacím centrem artefaktů a uměleckých děl, než byla odvezena do Německa. Může ti o tom vyprávět místní kurátorka, je to kolaborantka.//
+>>
+(click-replace: ">>") [
+ty: //Kde ji můžu najít?//
+>>]
+(click-replace: ">>") [
+známý: //Kolega tě za ní dovede, před několika dny byla zatčena. Jmenuje se Rose Valland.//
+[[Pokračovat->Rose Valland]]]<img src="https://www.messynessychic.com/wp-content/uploads/2015/10/loadimg-2.jpeg" width="100%" class="img">](else:)[//Muzeum Jeu de Paume bylo třídícím a skladovacím centrem artefaktů a uměleckých děl, než byla odvezena do Německa.//
+<img src="https://www.messynessychic.com/wp-content/uploads/2015/10/loadimg-2.jpeg" width="100%" class="img">]
+[[Zpět->známý pracující v muzeu]]
+
+
+:: známý pracující v muzeu {"position":"725,125","size":"100,100"}
+Jsi v muzeu Jeu de Paume v Paříži.
+Promluv si se známým >>
+(if: $RoseValland is not true)[(click-replace: "Promluv si se známým >>")[známý: //Přicházíš pozdě, nacisté si s sebou vzali tisíce děl ze soukromých sbírek místních židů. A nebrali jim jen díla, ale i majetek z jejich domovů, které museli opustit při povolání do koncentračního tábora.//
+[[zeptat se na majetek]][[zeptat se na umělecká díla]]]](if: $RoseValland is true)[(click-replace: "Promluv si se známým >>")[[zeptat se na majetek]][[zeptat se na umělecká díla]]]
+[[Zpět->Paříž, Francie]] 
+
+
+:: Úvod {"position":"300,175","size":"100,100"}
+Píše se rok 1933. Začíná největší krádež uměleckých děl v historii - nacisté nejen zabavovali celé sbírky obrazů, hlavně ty patřící židovským rodinám, také rabovali okupovaná města po celé Evropě.
+
+Roku 1943 zakládají Spojenci organizaci ''MFAA'' (Monuments, Fine Arts, and Archives Section Unit) neboli //''Monuments Men''//, která měla během války důležitou misi - ochránit historické a kulturní památky před zničením, ať už ze strany nacistů, tak i ze strany Spojenců, kteří při osvobozování často bombardovali města.
+
+V této únikové hře budeš právě členem MFAA a tvým úkolem bude zachránit co nejvíce uměleckých děl, aby mohla být navrácena zpět do muzeí a k rodinám do soukromých sbírek.
+
+[[Začít->Křižovatka]](set: $date to "Září 1944")
+
+
+:: Úvodní stránka {"position":"275,50","size":"100,100"}
+<div class="title">(text-style:"underline")[''PO STOPÁCH UMĚNÍ 1944 -1945'']</div>
+
+* délka:
+
+<div class="small-text">Poznámky:
+* tato hra nemá špatný konec, má jen jednu variantu závěru, a to aby mohla zůstat historicky co nejpřesnější
+* přesto se nedá spolehnout na pravdivost všech informací, hlavně co se týče datace
+* může se stát (ale pravděpodobné to není), že obrázky zmizí nebo budou nahrazeny jinými, nerelevantními, a to protože jsou do hry vloženy přímo jako html odkaz, nejčastěji z wikimedia commons </div>
+
+[[Úvod<- ''Spustit hru'']]
+
+
+:: StoryStylesheet [stylesheet]
+/* ================================================
+   WW2 ART LOOTING — TWINE STYLESHEET
+   Paste into: Story → Stylesheet
+   Fonts load automatically from Google Fonts.
+   ================================================ */
+
+/* — Fonts — */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* — Colour palette — */
+:root {
+  --bg:        #0f0e0c;
+  --paper:     #e8dfc8;
+  --ink:       #1a1510;
+  --red:       #8c1a00;
+  --gold:      #9a7c2a;
+  --gold-dim:  #6a5218;
+  --stamp-red: #7a1a00;
+}
+
+/* — Page background — */
+tw-story {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(80,60,20,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 100%, rgba(60,30,10,0.15) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)' opacity='0.055'/%3E%3C/svg%3E");
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem 5rem;
+}
+
+/* — Passage (the paper document) — */
+tw-passage {
+  background: var(--paper);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 40%);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  max-width: 660px;
+  width: 100%;
+  padding: 3rem 3.5rem 3.5rem;
+  border-radius: 3px;
+  position: relative;
+  box-shadow:
+    0 0 0 1px rgba(154,124,42,0.25),
+    0 0 0 4px rgba(15,14,12,0.9),
+    0 2px 6px rgba(0,0,0,0.4),
+    0 12px 60px rgba(0,0,0,0.7),
+    inset 0 0 80px rgba(0,0,0,0.06);
+  animation: fadeUp 0.55s ease both;
+}
+
+/* Red-and-gold stripe at the top */
+tw-passage::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--red) 0px, var(--red) 18px,
+    var(--gold-dim) 18px, var(--gold-dim) 20px
+  );
+}
+
+/* Torn paper bottom edge */
+tw-passage::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 0; right: 0;
+  height: 10px;
+  background: var(--paper);
+  clip-path: polygon(
+    0% 0%, 2% 100%, 5% 20%, 8% 90%, 12% 10%, 15% 80%,
+    18% 30%, 22% 100%, 26% 15%, 30% 85%, 34% 5%,
+    38% 95%, 42% 20%, 46% 80%, 50% 10%, 54% 90%,
+    58% 25%, 62% 100%, 66% 15%, 70% 75%, 74% 5%,
+    78% 95%, 82% 30%, 86% 80%, 90% 10%, 93% 85%,
+    96% 20%, 100% 100%, 100% 0%
+  );
+}
+
+/* — Links / player choices — */
+tw-link {
+  display: block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.88rem;
+  color: var(--ink);
+  border: 1px solid rgba(26,21,16,0.35);
+  border-left: 3px solid var(--red);
+  padding: 0.5rem 1rem 0.5rem 0.9rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.12s;
+}
+
+tw-link:hover {
+  background: rgba(140,26,0,0.07);
+  border-left-color: var(--gold);
+  color: var(--red);
+  transform: translateX(3px);
+}
+
+/* — Fade-in animation — */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* - Image text wrapping - */
+.img-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  padding: 3px;
+  border: 3px solid #6a5218;
+}
+.img-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  padding: 3px;
+  border: 3px solid #6a5218;
+}
+
+.img-text {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+.img-text img {
+  width: 32%;
+  flex-shrink: 0;
+  padding: 3px;
+  border: 3px solid #6a5218;
+}
+.img {
+  padding: 3px;
+  border: 3px solid #6a5218;
+  margin: 10px 0 0 0;
+}
+.text-col {
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.8rem;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}

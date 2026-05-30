@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nazi Art Repositories — Europe 1939–1945</title>
+<title>Nacistické depozitáře umění — Evropa 1939–1945</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -134,7 +134,7 @@ h1 {
 </head>
 <body>
 
-<h1>Nazi Art Repositories — Europe 1939–1945</h1>
+<h1>Nacistické depozitáře umění — Evropa 1939–1945</h1>
 <p class="subtitle">20 major known locations · hover for details</p>
 
 <div class="map-outer">
@@ -148,18 +148,18 @@ h1 {
     <svg width="16" height="16" viewBox="0 0 16 16">
       <polygon points="8,1 9.5,5.5 14.5,5.5 10.5,8.5 12,13 8,10 4,13 5.5,8.5 1.5,5.5 6.5,5.5" fill="#e8c840" stroke="#9a7020" stroke-width="1"/>
     </svg>
-    Locations featured in the game
+    Depozitáře umění navštívená ve hře
   </div>
   <div class="li">
     <svg width="14" height="14" viewBox="0 0 14 14">
       <circle cx="7" cy="7" r="5.5" fill="#8c1a00" stroke="#e04020" stroke-width="1.2"/>
       <circle cx="7" cy="7" r="2.2" fill="#f06040"/>
     </svg>
-    Other major repositories / looting centres
+    Další významné depozitáře
   </div>
 </div>
 
-<p class="map-note">Hover over any marker for details · Map data © OpenStreetMap contributors</p>
+<p class="map-note">Přejeď myší nad vybranou lokaci pro více informací. · Map data © OpenStreetMap contributors</p>
 
 <!-- Leaflet JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -265,89 +265,88 @@ function addMarker(lat, lng, name, country, info, isIngame) {
 // ════════════════════════════════════════════════
 
 // ── IN-GAME (gold stars) ──
-addMarker(50.87, 8.02, 'Siegen', 'Germany',
-  'Copper mine used to store art from Aachen Cathedral, Cologne, and other Rhineland collections. Discovered by US forces, April 1945.',
+addMarker(50.87, 8.02, 'Siegen', 'Německo',
+  'Měděný důl sloužící k úschově umění z cášské katedrály, Kolína nad Rýnem a dalších porýnských sbírek. Objeven americkými silami v dubnu 1945.',
   true);
 
-addMarker(50.65, 10.18, 'Merkers', 'Germany',
-  'Kaiseroda salt mine. Held the entire Reichsbank gold reserve and hundreds of artworks from Berlin museums. Discovered by US 3rd Army, April 1945.',
+addMarker(50.65, 10.18, 'Merkers', 'Německo',
+  'Solný důl Kaiseroda. Uchovával veškeré zlaté rezervy Říšské banky a stovky uměleckých děl z berlínských muzeí. Objeven 3. americkou armádou v dubnu 1945.',
   true);
 
-addMarker(47.56, 10.75, 'Neuschwanstein', 'Germany — Bavaria',
-  'Fairytale castle used as a major ERR depot. Held 21,000+ objects looted from France, including entire Jewish private collections. Discovered May 1945.',
+addMarker(47.56, 10.75, 'Neuschwanstein', 'Německo — Bavorsko',
+  'Pohádkový hrad sloužící jako hlavní sklad ERR. Uchovával přes 21 000 předmětů uloupených z Francie, včetně celých soukromých židovských sbírek. Objeven v květnu 1945.',
   true);
 
-addMarker(47.64, 13.77, 'Altaussee', 'Austria',
-  "Salt mine in the Austrian Alps. Hitler's personal repository for the planned Führermuseum in Linz. Held 6,500+ works including the Ghent Altarpiece. Local miners defused Nazi demolition charges to save the art.",
+addMarker(47.64, 13.77, 'Altaussee', 'Rakousko',
+  'Solný důl v rakouských Alpách. Hitlerovo osobní úložiště pro plánované Führermuseum v Linci. Uchovával přes 6 500 děl včetně Gentského oltářního obrazu. Místní horníci zneškodnili nacistické demoliční nálože, aby umění zachránili.',
   true);
 
-// ── OTHER MAJOR REPOSITORIES (red dots) ──
-addMarker(48.86, 2.33, 'Jeu de Paume — Paris', 'France',
-  'Central ERR sorting depot in occupied Paris. Rose Valland secretly documented thousands of works passing through here. Over 20,000 objects processed 1940–44.',
+addMarker(48.86, 2.33, 'Jeu de Paume — Paříž', 'Francie',
+  'Centrální třídící sklad ERR v okupované Paříži. Rose Vallandová tajně dokumentovala tisíce děl, která tudy prošla. V letech 1940–44 bylo zpracováno přes 20 000 předmětů.',
   false);
 
-addMarker(52.52, 13.40, 'Berlin — Flak Towers & Zoo Bunker', 'Germany',
-  'Flak towers and the Zoo bunker stored Kaiser Friedrich Museum collections during Allied bombing. Much was evacuated west before the Soviet advance.',
+addMarker(52.52, 13.40, 'Berlín — protiletadlové věže a Zoo bunker', 'Německo',
+  'Protiletadlové věže a Zoo bunker uchovávaly sbírky Kaiser Friedrich Museum během spojeneckého bombardování. Velká část byla evakuována na západ před sovětským postupem.',
   false);
 
-addMarker(48.14, 11.58, 'Munich', 'Germany',
-  'Major Nazi cultural centre. Central collection point for art destined for the Führermuseum. Göring\'s acquisitions passed through here.',
+addMarker(48.14, 11.58, 'Mnichov', 'Německo',
+  'Hlavní nacistické kulturní centrum. Centrální sběrné místo pro umění určené do Führermusea. Procházely tudy Göringovy akvizice.',
   false);
 
-addMarker(47.63, 13.00, 'Berchtesgaden area', 'Germany — Bavaria',
-  "Hitler's mountain retreat. Large cache of looted art stored in the area including parts of Göring's personal collection. Discovered by US forces May 1945.",
+addMarker(47.63, 13.00, 'Oblast Berchtesgaden', 'Německo — Bavorsko',
+  'Hitlerovo horské útočiště. V okolí bylo uskladněno velké množství uloupeného umění včetně části Göringovy osobní sbírky. Objeveno americkými silami v květnu 1945.',
   false);
 
-addMarker(51.20, 3.22, 'Bruges — Church of Our Lady', 'Belgium',
-  "Michelangelo's Madonna of Bruges was looted by the Nazis in 1944. One of the very few works taken outside Italy during Michelangelo's lifetime. Recovered from Altaussee in 1945.",
+addMarker(51.20, 3.22, 'Bruggy — Chrám Panny Marie', 'Belgie',
+  'Michelangelova Madonna bruggská byla nacisty uloupena v roce 1944. Jedno z mála děl vyvezených z Itálie za Michelangelova života. Nalezena v Altaussee v roce 1945.',
   false);
 
-addMarker(52.37, 4.90, 'Amsterdam', 'Netherlands',
-  'Occupied Netherlands was a major source of looted art. The ERR seized thousands of works from Jewish collections. The Mühlmann Task Force operated extensively here.',
+addMarker(52.37, 4.90, 'Amsterdam', 'Nizozemsko',
+  'Okupované Nizozemsko bylo hlavním zdrojem uloupeného umění. ERR zabavila tisíce děl ze židovských sbírek. Rozsáhle zde působila Mühlmannova pracovní skupina.',
   false);
 
-addMarker(48.21, 16.37, 'Vienna', 'Austria',
-  'Major administrative centre for art looting. The Kunsthistorisches Museum and private Jewish collections were systematically stripped after the 1938 Anschluss.',
+addMarker(48.21, 16.37, 'Vídeň', 'Rakousko',
+  'Hlavní administrativní centrum pro loupeže umění. Kunsthistorisches Museum a soukromé židovské sbírky byly systematicky vykrádány po anšlusu v roce 1938.',
   false);
 
-addMarker(50.06, 19.94, 'Kraków — Wawel Castle', 'Poland',
-  "Governor-General Hans Frank installed himself in Wawel Castle and stored looted Polish treasures there, including Leonardo da Vinci's Lady with an Ermine.",
+addMarker(50.06, 19.94, 'Krakov — hrad Wawel', 'Polsko',
+  'Generální guvernér Hans Frank se usídlil na hradě Wawel a uchovával tam uloupené polské poklady včetně Leonardovy Dámy s hranostajem.',
   false);
 
-addMarker(50.92, 13.88, 'Schloss Weesenstein', 'Germany — Saxony',
-  'Saxon castle used to store the famous Dresden Gallery collections evacuated ahead of Allied bombing. The paintings were later seized by Soviet troops.',
+addMarker(50.92, 13.88, 'Zámek Weesenstein', 'Německo — Sasko',
+  'Saský zámek sloužící k úschově sbírek Drážďanské galerie evakuovaných před spojeneckým bombardováním. Obrazy byly později zabaveny sovětskými vojsky.',
   false);
 
-addMarker(49.14, 9.22, 'Heilbronn Salt Mine', 'Germany',
-  'Large salt mine storing Staatsgalerie Stuttgart collections and other regional German museum holdings. One of the major mine repositories in SW Germany.',
+addMarker(49.14, 9.22, 'Solný důl Heilbronn', 'Německo',
+  'Rozsáhlý solný důl uchovávající sbírky Státní galerie ve Stuttgartu a dalších regionálních německých muzeí. Jeden z hlavních důlních skladů v jihozápadním Německu.',
   false);
 
-addMarker(48.31, 14.29, 'Linz — Führermuseum site', 'Austria',
-  "Hitler's planned Führermuseum was to be built in his hometown Linz. Thousands of works across Europe were specifically earmarked for it. The museum was never built.",
+addMarker(48.31, 14.29, 'Linec — plánované Führermuseum', 'Rakousko',
+  'Hitlerovo plánované Führermuseum mělo být postaveno v jeho rodném Linci. Tisíce děl z celé Evropy byly speciálně určeny právě pro něj. Muzeum nikdy nebylo postaveno.',
   false);
 
-addMarker(47.90, 10.30, 'Buxheim Monastery', 'Germany — Bavaria',
-  'Bavarian monastery used to store over 1,000 objects looted by the ERR, including furniture and decorative arts from French châteaux.',
+addMarker(47.90, 10.30, 'Klášter Buxheim', 'Německo — Bavorsko',
+  'Bavorský klášter sloužící k uskladnění více než 1 000 předmětů uloupeného ERR, včetně nábytku a dekorativního umění z francouzských zámků.',
   false);
 
-addMarker(43.77, 11.26, 'Florence', 'Italy',
-  'The Nazis systematically looted Florentine artworks before retreating in 1944. The Uffizi collections were partially evacuated but significant works were stolen.',
+addMarker(43.77, 11.26, 'Florencie', 'Itálie',
+  'Nacisté systematicky rabovali florentská umělecká díla před ústupem v roce 1944. Sbírky Uffizi byly částečně evakuovány, přesto byla významná díla odcizena.',
   false);
 
-addMarker(41.49, 13.82, 'Monte Cassino', 'Italy',
-  'German paratroopers moved art from Monte Cassino monastery to the Vatican and then to Germany in 1943, claiming to protect it. Most was recovered after the war.',
+addMarker(41.49, 13.82, 'Monte Cassino', 'Itálie',
+  'Němečtí výsadkáři přesunuli umění z kláštera Monte Cassino do Vatikánu a poté do Německa v roce 1943 s odůvodněním, že ho chrání. Většina byla po válce navrácena.',
   false);
 
-addMarker(47.82, 13.04, 'Schloss Fischhorn', 'Austria',
-  "Castle near Zell am See used to store Göring's personal collection in the final months of the war. Allied troops found significant quantities of looted art here in 1945.",
+addMarker(47.82, 13.04, 'Zámek Fischhorn', 'Rakousko',
+  'Zámek poblíž Zell am See sloužící k úschově Göringovy osobní sbírky v posledních měsících války. Spojenecká vojska zde v roce 1945 nalezla značné množství uloupeného umění.',
   false);
 
-addMarker(51.79, 10.94, 'Quedlinburg', 'Germany',
-  'A US soldier stole the Quedlinburg Treasures — medieval church relics and manuscripts — from a mine here in 1945. They were not recovered until the 1990s.',
+addMarker(51.79, 10.94, 'Quedlinburg', 'Německo',
+  'Americký voják odcizil z místního dolu v roce 1945 tzv. Quedlinburské poklady — středověké církevní relikvie a rukopisy. Nalezeny nebyly až do 90. let 20. století.',
   false);
 
-addMarker(48.47, 15.99, 'Schloss Immendorf', 'Austria',
-  'Austrian castle storing Klimt paintings looted from the Lederer family. The SS burned the castle in May 1945 — several Klimt masterworks were destroyed in the fire.',
+addMarker(48.47, 15.99, 'Zámek Immendorf', 'Rakousko',
+  'Rakouský zámek uchovávající Klimtovy obrazy uloupené rodině Ledererových. SS zámek v květnu 1945 zapálila — několik Klimtových mistrovských děl při požáru zaniklo.',
   false);
 
 // ── Apply sepia filter to tiles via CSS ──

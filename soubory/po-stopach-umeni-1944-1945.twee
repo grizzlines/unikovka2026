@@ -38,7 +38,7 @@ Z Beethoven-Haus sem byl přivezen rukopis Symfonie č. 6.
 [[Zpět->Siegen, Německo]]
 
 
-:: Bonus - mapa vygenerovaná AI pro tuto hru {"position":"1150,900","size":"100,100"}
+:: Bonus (vygenerováno AI) {"position":"1150,900","size":"100,100"}
 <iframe src="https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories" width=100% height=950></iframe>
 [[Zpět->Závěr]]
 
@@ -181,13 +181,13 @@ V 23 x 46 metrů velké místnosti vidíš různé podoby zlata, peníze, stří
 
 
 :: Neuschwanstein, Německo {"position":"600,350","size":"100,100"}
-<img src="https://www.warhistoryonline.com/wp-content/uploads/sites/64/2014/03/photo11.jpg" width="100%" class=img> (if: $NeuschwansteinDone is true)[(link: "Podívat se po užitečných dokumentech")[(go to: "Podívat se po užitečných dokumentech)] [[Prozkoumat ukradená díla a majetek]]] (if: $date is "Duben 1945")[Tuto lokaci jste našli díky záznamům Rose Valland, spolu s dalšími místy na jihu Německa - Heilbronn, Baxheim, Hohenschwangau. Bohužel se tam zatím nedostaneš, tuto oblast mají stále pod kontrolou Němci. Doufáš, že se ji Spojencům podaří obsadit co nejdřív, s Neronovým rozkazem je totiž možné, že bude obsah Neuschwansteinu zničen.] (if: $date is "Květen 1945")+(unless: $NeuschwansteinArt and $NeuschwansteinDocu is true)[4. května přicházíš do pohádkového zámku Neuschwanstein. Uvnitř najdeš spousty právě zabalených děl, s toho si vyvodíš, že je nacisté právě vyváželi, když tato oblast byla obsazena. Jsou tu obrazy, vzácný nábytek a další poklady přivezené z Francie. [[Prozkoumat ukradená díla a majetek]] [[Podívat se po užitečných dokumentech]]] (if: $NeuschwansteinArt and $NeuschwansteinDocu is true)+(if: $NeuschwansteinDone is not true)[Spokojeně se vracíš z Neuschwansteinu. Tvá práce tam se povedla, ale musíš myslet na další depozitáře a co jim hrozí. Nedávno nalezeným místem je Bernterode, ale ty teď máš důležitější misi - jet do Rakouska. V Altaussee totiž nejspíš skladují hodně důležitá díla - prozradil to jeden nacista výměnou za bezpečnou cestu do Paříže.(set: $NeuschwansteinDone to true)]
+<img src="https://www.warhistoryonline.com/wp-content/uploads/sites/64/2014/03/photo11.jpg" width="100%" class=img> (if: $NeuschwansteinDone is true)[(link: "Podívat se po užitečných dokumentech")[(go to: "Podívat se po užitečných dokumentech)] [[Prozkoumat ukradená díla a majetek]]] (if: $date is "Duben 1945")[Tuto lokaci jste našli díky záznamům Rose Valland, spolu s dalšími místy na jihu Německa - Heilbronn, Baxheim, Hohenschwangau. Bohužel se tam zatím nedostaneš, tuto oblast mají stále pod kontrolou Němci. Doufáš, že se ji Spojencům podaří obsadit co nejdřív, s Neronovým rozkazem je totiž možné, že bude obsah Neuschwansteinu zničen.] (if: $date is "Květen 1945")+(unless: $NeuschwansteinArt and $NeuschwansteinDocu is true)[4. května přicházíš do pohádkového zámku Neuschwanstein. Uvnitř najdeš spousty právě zabalených děl, s toho si vyvodíš, že je nacisté zrovna vyváželi, když tato oblast byla obsazena. Jsou tu obrazy, vzácný nábytek a další poklady přivezené z Francie. [[Prozkoumat ukradená díla a majetek]] [[Podívat se po užitečných dokumentech]]] (if: $NeuschwansteinArt and $NeuschwansteinDocu is true)+(if: $NeuschwansteinDone is not true)[Spokojeně se vracíš z Neuschwansteinu. Tvá práce tam se povedla, ale musíš myslet na další depozitáře a co jim hrozí. Nedávno nalezeným místem je Bernterode, ale ty teď máš důležitější misi - jet do Rakouska. V Altaussee totiž nejspíš skladují hodně důležitá díla - prozradil to jeden nacista výměnou za bezpečnou cestu do Paříže.(set: $NeuschwansteinDone to true)]
 [[Zpět->Křižovatka]]
 
 
 :: Paříž, Francie {"position":"600,200","size":"100,100"}
 Jsi v Paříži. Máš tu tyto kontakty, které můžeš navštívit:
-[[blízký kamarád]] [[známý pracující v muzeu]] (if: $SiegenDone is true)[[Rose Valland->Rose Valland 2]]
+[[blízký kamarád]] [[známý pracující v muzeu]] (if: $SiegenDone is true)+(if: $RoseVallandDone is not true)[[Rose Valland->Rose Valland 2]]
 [[Zpět->Křižovatka]] 
 
 
@@ -226,7 +226,7 @@ Prudce se na tebe otočí. //A co vlatně chcete?//
 > //Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.//(replace: "> Proč byste pomáhala nacistům? Nevážíte si kulturního dědictví vaší země?")[]]
 (click-replace: "> Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.")[
 //Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.//
-(replace: "> Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.") [//Stejně si vy američani chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje.](set: $RoseValland to true)]
+(replace: "> Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.") [//Stejně si vy Američané chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje.](set: $RoseValland to true)]
 (click-replace: "> Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.")[//Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.//
 
 
@@ -235,16 +235,16 @@ Prudce se na tebe otočí. //A co vlatně chcete?//
 
 :: Rose Valland 2 {"position":"900,300","size":"100,100"}
 Přijdeš do kavárny, kde v tuhle dobu obvykle vysedává Rose Valland. Spatříš ji a přisedneš si. Bez výrazného překvapení zvedne hlavu.
->> (click-replace: ">>")[
+|first>[>>] (click-replace: ?first)[
 //Zase vy... Jaké argumenty pro mě máte dnes?// 
 > Říct jí o Neronově rozkazu
 > Říct jí o dole v Siegenu
 ](click-replace: "> Říct jí o Neronově rozkazu")[
 //Slyšela jste o tomto dokumentu?// Vytáhneš kopii Neronova rozkazu. //Pokud si nepospíšíme, budou díla zničena. Možná dokonce zmizí i silnice a mosty, kterými bychom se k depozitářům dostali.// Prosebně se na Valland podíváš.
--- (replace: "> Říct jí o dole v Siegenu")[]](click-replace: "--")[
+|second>[>>] (replace: "> Říct jí o dole v Siegenu")[]](click-replace: ?second)[
 Pohlédne na kopii a ustaraně se zamračí. //To je příšerné...// Chvíli usilovně přemýšlí a s nečitelným výrazem v obličeji si znovu a znovu čte Hitlerova slova. Nakonec se prudce zvedne. //Pojďte za mnou.// [[jít za Rose Valland]]](click-replace: "> Říct jí o dole v Siegenu")[(replace: "> Říct jí o Neronově rozkazu")[]
 //Mám pro vás dobré zprávy. Před pár dny jsme našli jeden depozitář umění v měděném dole v Německu. Usilovně se pracuje na dokumentaci, aby mohla být díla co nejdříve navrácena tam, kam patří. Proto bychom taky byli moc rádi, kdyby jste nám poskytla informace k umění z Paříže. Určitě je chcete vidět zpátky v muzeu Jeu de Paume co nejdříve.// Prosebně se na Valland podíváš.
-_](click-replace: "_")[
+|third>[>>]](click-replace: ?third)[
 Úsměv, který se jí na obličeji při tvé první větě objevil, se pomalu vytrácí. Vypadá ještě víc ustaraně, než při vašem prvním setkání. Po několikavteřinové reflexi kývne hlavou a zvedne se od stolu. [[jít za Rose Valland]]]
 
 
@@ -824,13 +824,33 @@ Už je konec války, to znamená, že po pomoci s dokumentací se za několik m�
 
 V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům.
 
-(link: "Zdroje")[(go-to: "Zdroje")] (link: "Bonus - mapa vygenerovaná AI podle této hry")[(goto-url: "https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories")]](else:)[(text-style:"fade-in-out")[''Gratuluji!'']
+(link: "Zdroje")[(go-to: "Zdroje")] (link: "Bonus (vygenerováno AI)")[(go-to: "Bonus (vygenerováno AI)")]
+
+<div class=small-text>
+2026
+Ines Brožíková
+
+Pomáhali:
+- táta (technická pomoc)
+- ClaudeAI (technická pomoc, pomoc s researchí, bonus)</div>] (else:)[(text-style:"fade-in-out")[''Gratuluji!'']
 
 Už je konec války, to znamená, že po pomoci s dokumentací se za několik měsíců vracíš domů, ke své práci v muzeu, kde tě pravděpodobně povýší. Díky tvé pomoci se nalezlo spousta depozitářů v několika zemích Evropy. Jen v Německu jich bylo kolem 1 500. >>(click-replace: ">>")[
 
 V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům. >>](click-replace: ">>")[
 
-[[Zdroje]] [[Bonus - mapa vygenerovaná AI pro tuto hru]](set: $End to true)]]
+[[Zdroje]] [[Bonus (vygenerováno AI)]](set: $End to true)
+
+<div class=small-text>
+2026
+Ines Brožíková
+
+Pomáhali:
+- táta (technická pomoc)
+- ClaudeAI (technická pomoc, pomoc s researchí, bonus)</div>]]
+
+
+:: \[zeptat se na majetek {"position":"850,625","size":"100,100"}
+
 
 
 :: blízký kamarád {"position":"725,275","size":"100,100"}
@@ -904,7 +924,7 @@ známý: //Kolega tě za ní dovede, před několika dny byla zatčena. Jmenuje 
 Jsi v muzeu Jeu de Paume v Paříži.
 Promluv si se známým >>
 (if: $RoseValland is not true)[(click-replace: "Promluv si se známým >>")[známý: //Přicházíš pozdě, nacisté si s sebou vzali tisíce děl ze soukromých sbírek místních židů. A nebrali jim jen díla, ale i majetek z jejich domovů, které museli opustit při povolání do koncentračního tábora.//
-[[zeptat se na majetek]][[zeptat se na umělecká díla]]]](if: $RoseValland is true)[(click-replace: "Promluv si se známým >>")[[zeptat se na majetek]][[zeptat se na umělecká díla]]]
+[[zeptat se na majetek]][[zeptat se na umělecká díla]]]](if: $RoseValland is true)[(click-replace: "Promluv si se známým >>")[[[zeptat se na majetek]][[zeptat se na umělecká díla]]]]
 [[Zpět->Paříž, Francie]] 
 
 
@@ -920,10 +940,8 @@ V této únikové hře budeš právě členem MFAA a tvým úkolem bude zachrán
 
 :: Úvodní stránka {"position":"275,50","size":"100,100"}
 <div class="title">(text-style:"underline")[''PO STOPÁCH UMĚNÍ 1944 -1945'']</div>
-
-* délka: 15 - 20 min
-
-<div class="small-text">Poznámky:
+* délka: 15 - 20 min 
+<div class="small-text">
 * tato hra nemá špatný konec, má jen jednu variantu závěru, a to aby mohla zůstat historicky co nejpřesnější
 * přesto se nedá spolehnout na pravdivost všech informací, hlavně co se týče datace
 * může se stát (ale pravděpodobné to není), že obrázky zmizí nebo budou nahrazeny jinými, nerelevantními, a to protože jsou do hry vloženy přímo jako html odkaz, nejčastěji z wikimedia commons </div>

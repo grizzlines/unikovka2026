@@ -168,10 +168,8 @@ tw-link:hover {
 .small-text {
   font-size: 0.8rem;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="ERR" color="blue"></tw-tag><tw-passagedata pid="1" name="Úvodní stránka" tags="" position="275,50" size="100,100">&lt;div class=&quot;title&quot;&gt;(text-style:&quot;underline&quot;)[&#39;&#39;PO STOPÁCH UMĚNÍ 1944 -1945&#39;&#39;]&lt;/div&gt;
-
-* délka: 15 - 20 min
-
-&lt;div class=&quot;small-text&quot;&gt;Poznámky:
+* délka: 15 - 20 min 
+&lt;div class=&quot;small-text&quot;&gt;
 * tato hra nemá špatný konec, má jen jednu variantu závěru, a to aby mohla zůstat historicky co nejpřesnější
 * přesto se nedá spolehnout na pravdivost všech informací, hlavně co se týče datace
 * může se stát (ale pravděpodobné to není), že obrázky zmizí nebo budou nahrazeny jinými, nerelevantními, a to protože jsou do hry vloženy přímo jako html odkaz, nejčastěji z wikimedia commons &lt;/div&gt;
@@ -233,7 +231,7 @@ Založená roku 1940, ERR byla organizace nacistické strany, která sloužila k
 Druhá část sbírky zůstala na Carinhallu. V lednu 1945 rozhodl Göring o jejím převozu zvláštními vlaky do Berchtesgadenu, kde měla být ukryta v tunelech. Umělecké poklady pak byly vyloženy a umístěny do protileteckého krytu.
 
 elle communique aux Alliés les noms des dépôts allemands et autrichiens (Altaussee, Buxheim, Neuschwanstein-Füssen, Nikolsburg, etc.)</tw-passagedata><tw-passagedata pid="9" name="Paříž, Francie" tags="" position="600,200" size="100,100">Jsi v Paříži. Máš tu tyto kontakty, které můžeš navštívit:
-[[blízký kamarád]] [[známý pracující v muzeu]] (if: $SiegenDone is true)[[Rose Valland-&gt;Rose Valland 2]]
+[[blízký kamarád]] [[známý pracující v muzeu]] (if: $SiegenDone is true)+(if: $RoseVallandDone is not true)[[Rose Valland-&gt;Rose Valland 2]]
 [[Zpět-&gt;Křižovatka]] </tw-passagedata><tw-passagedata pid="10" name="Bruggy, Belgie" tags="" position="475,125" size="100,100">(if: $BrugesMadonna is not true)[Jsi v tomto městě kvůli velice významnému dílu - Madona z Brugg. Jdeš do kostela Panny Marie ujistit se, že je v pořádku.
 (click: &quot;Madona z Brugg&quot;)[(text-style:&quot;bold&quot;,&quot;underline&quot;)
 [Madona z Brugg] (1501-1504)
@@ -246,7 +244,7 @@ Mramorová socha z doby renesance je první socha Michelangela Buonarrotiho, kte
 ][[Zpět-&gt;Paříž, Francie]] </tw-passagedata><tw-passagedata pid="12" name="známý pracující v muzeu" tags="" position="725,125" size="100,100">Jsi v muzeu Jeu de Paume v Paříži.
 Promluv si se známým &gt;&gt;
 (if: $RoseValland is not true)[(click-replace: &quot;Promluv si se známým &gt;&gt;&quot;)[známý: //Přicházíš pozdě, nacisté si s sebou vzali tisíce děl ze soukromých sbírek místních židů. A nebrali jim jen díla, ale i majetek z jejich domovů, které museli opustit při povolání do koncentračního tábora.//
-[[zeptat se na majetek]][[zeptat se na umělecká díla]]]](if: $RoseValland is true)[(click-replace: &quot;Promluv si se známým &gt;&gt;&quot;)[[zeptat se na majetek]][[zeptat se na umělecká díla]]]
+[[zeptat se na majetek]][[zeptat se na umělecká díla]]]](if: $RoseValland is true)[(click-replace: &quot;Promluv si se známým &gt;&gt;&quot;)[[[zeptat se na majetek]][[zeptat se na umělecká díla]]]]
 [[Zpět-&gt;Paříž, Francie]] </tw-passagedata><tw-passagedata pid="13" name="zeptat se na majetek" tags="" position="850,25" size="100,100">Jen v Paříži bylo vyloupeno 38 000 židovských domů. Starala se o to hlavně organizace EER. Získaný nábytek a cennosti skladovali v obchodním domě Lévitan než byly prodány Němcům. Lévitan také sloužil jako pracovní tábor pro židy, kteří tam třídili, zapisovali a opravovali ukradený majetek. Celkem byly v Paříži vytvořeny tři takové tábory.
 (click: &quot;EER&quot;)[
 &#39;&#39;(text-style:&quot;underline&quot;)[Einsatzstab Reichsleiter Rosenberg]&#39;&#39;
@@ -283,21 +281,21 @@ Prudce se na tebe otočí. //A co vlatně chcete?//
 &gt; //Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.//(replace: &quot;&gt; Proč byste pomáhala nacistům? Nevážíte si kulturního dědictví vaší země?&quot;)[]]
 (click-replace: &quot;&gt; Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.&quot;)[
 //Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.//
-(replace: &quot;&gt; Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.&quot;) [//Stejně si vy američani chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje.](set: $RoseValland to true)]
+(replace: &quot;&gt; Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.&quot;) [//Stejně si vy Američané chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje.](set: $RoseValland to true)]
 (click-replace: &quot;&gt; Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.&quot;)[//Potřebuji vědět, kam nacisté odvezli díla, abychom je mohli jít hledat.//
 
 
 //Stejně si vy Američané chcete díla nechat pro sebe.// Znechuceně se na tebe podívá a dál už tě ignoruje. (replace: &quot;&gt; Jsem členem organizace MFAA. Určitě jste o nás slyšela - chceme vám pomoci navrátit ukradená díla.&quot;) [](set: $RoseValland to true)][[Zpět-&gt;zeptat se na umělecká díla]] &lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Rose Valland 2" tags="" position="900,300" size="100,100">Přijdeš do kavárny, kde v tuhle dobu obvykle vysedává Rose Valland. Spatříš ji a přisedneš si. Bez výrazného překvapení zvedne hlavu.
-&gt;&gt; (click-replace: &quot;&gt;&gt;&quot;)[
+|first&gt;[&gt;&gt;] (click-replace: ?first)[
 //Zase vy... Jaké argumenty pro mě máte dnes?// 
 &gt; Říct jí o Neronově rozkazu
 &gt; Říct jí o dole v Siegenu
 ](click-replace: &quot;&gt; Říct jí o Neronově rozkazu&quot;)[
 //Slyšela jste o tomto dokumentu?// Vytáhneš kopii Neronova rozkazu. //Pokud si nepospíšíme, budou díla zničena. Možná dokonce zmizí i silnice a mosty, kterými bychom se k depozitářům dostali.// Prosebně se na Valland podíváš.
--- (replace: &quot;&gt; Říct jí o dole v Siegenu&quot;)[]](click-replace: &quot;--&quot;)[
+|second&gt;[&gt;&gt;] (replace: &quot;&gt; Říct jí o dole v Siegenu&quot;)[]](click-replace: ?second)[
 Pohlédne na kopii a ustaraně se zamračí. //To je příšerné...// Chvíli usilovně přemýšlí a s nečitelným výrazem v obličeji si znovu a znovu čte Hitlerova slova. Nakonec se prudce zvedne. //Pojďte za mnou.// [[jít za Rose Valland]]](click-replace: &quot;&gt; Říct jí o dole v Siegenu&quot;)[(replace: &quot;&gt; Říct jí o Neronově rozkazu&quot;)[]
 //Mám pro vás dobré zprávy. Před pár dny jsme našli jeden depozitář umění v měděném dole v Německu. Usilovně se pracuje na dokumentaci, aby mohla být díla co nejdříve navrácena tam, kam patří. Proto bychom taky byli moc rádi, kdyby jste nám poskytla informace k umění z Paříže. Určitě je chcete vidět zpátky v muzeu Jeu de Paume co nejdříve.// Prosebně se na Valland podíváš.
-_](click-replace: &quot;_&quot;)[
+|third&gt;[&gt;&gt;]](click-replace: ?third)[
 Úsměv, který se jí na obličeji při tvé první větě objevil, se pomalu vytrácí. Vypadá ještě víc ustaraně, než při vašem prvním setkání. Po několikavteřinové reflexi kývne hlavou a zvedne se od stolu. [[jít za Rose Valland]]]</tw-passagedata><tw-passagedata pid="17" name="navštívit Madonu" tags="" position="525,0" size="100,100">Jsi v kostele, ale Madonu nemůžeš najít. V tu chvíli zahlédneš kněze.
 Mluvit s knězem &gt;&gt; (click-replace: &quot;Mluvit s knězem &gt;&gt;&quot;)[
 //Promiňte, kde tady máte Madonu z Brugg?//
@@ -396,7 +394,7 @@ Zde nacházíš katalogy s fotografiemi a záznamy děl. Tento velice cenný ná
 [[Zpět-&gt;Neuschwanstein, Německo]] </tw-passagedata><tw-passagedata pid="30" name="Prozkoumat ukradená díla a majetek" tags="" position="675,475" size="100,100">Spousta cenností pokrývá prostory zámku. Jsou tu nejenom díla z Jeu de Paume, ale i předměty ze sbírek významných židovských rodin, jako jsou například Rothschildové. U většiny děl vidíš to samé razítko: &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/6/6e/Stempel_einsatzstab_rr.png&quot; width=&quot;80%&quot; class=img&gt;
 Všechno roztřídit, identifikovat a přepravit k původním majitelům bude nějakou dobu trvat. Víš ale, že Rose Valland bude mít velkou radost.
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/3/38/Monuments_Men%2C_Neuschwanstein_Castle%2C_Germany%2C_1945.png&quot; width=&quot;100%&quot; class=&quot;img&quot;&gt; (set: $NeuschwansteinArt  to true)
-[[Zpět-&gt;Neuschwanstein, Německo]] </tw-passagedata><tw-passagedata pid="31" name="Neuschwanstein, Německo" tags="" position="600,350" size="100,100">&lt;img src=&quot;https://www.warhistoryonline.com/wp-content/uploads/sites/64/2014/03/photo11.jpg&quot; width=&quot;100%&quot; class=img&gt; (if: $NeuschwansteinDone is true)[(link: &quot;Podívat se po užitečných dokumentech&quot;)[(go to: &quot;Podívat se po užitečných dokumentech)] [[Prozkoumat ukradená díla a majetek]]] (if: $date is &quot;Duben 1945&quot;)[Tuto lokaci jste našli díky záznamům Rose Valland, spolu s dalšími místy na jihu Německa - Heilbronn, Baxheim, Hohenschwangau. Bohužel se tam zatím nedostaneš, tuto oblast mají stále pod kontrolou Němci. Doufáš, že se ji Spojencům podaří obsadit co nejdřív, s Neronovým rozkazem je totiž možné, že bude obsah Neuschwansteinu zničen.] (if: $date is &quot;Květen 1945&quot;)+(unless: $NeuschwansteinArt and $NeuschwansteinDocu is true)[4. května přicházíš do pohádkového zámku Neuschwanstein. Uvnitř najdeš spousty právě zabalených děl, s toho si vyvodíš, že je nacisté právě vyváželi, když tato oblast byla obsazena. Jsou tu obrazy, vzácný nábytek a další poklady přivezené z Francie. [[Prozkoumat ukradená díla a majetek]] [[Podívat se po užitečných dokumentech]]] (if: $NeuschwansteinArt and $NeuschwansteinDocu is true)+(if: $NeuschwansteinDone is not true)[Spokojeně se vracíš z Neuschwansteinu. Tvá práce tam se povedla, ale musíš myslet na další depozitáře a co jim hrozí. Nedávno nalezeným místem je Bernterode, ale ty teď máš důležitější misi - jet do Rakouska. V Altaussee totiž nejspíš skladují hodně důležitá díla - prozradil to jeden nacista výměnou za bezpečnou cestu do Paříže.(set: $NeuschwansteinDone to true)]
+[[Zpět-&gt;Neuschwanstein, Německo]] </tw-passagedata><tw-passagedata pid="31" name="Neuschwanstein, Německo" tags="" position="600,350" size="100,100">&lt;img src=&quot;https://www.warhistoryonline.com/wp-content/uploads/sites/64/2014/03/photo11.jpg&quot; width=&quot;100%&quot; class=img&gt; (if: $NeuschwansteinDone is true)[(link: &quot;Podívat se po užitečných dokumentech&quot;)[(go to: &quot;Podívat se po užitečných dokumentech)] [[Prozkoumat ukradená díla a majetek]]] (if: $date is &quot;Duben 1945&quot;)[Tuto lokaci jste našli díky záznamům Rose Valland, spolu s dalšími místy na jihu Německa - Heilbronn, Baxheim, Hohenschwangau. Bohužel se tam zatím nedostaneš, tuto oblast mají stále pod kontrolou Němci. Doufáš, že se ji Spojencům podaří obsadit co nejdřív, s Neronovým rozkazem je totiž možné, že bude obsah Neuschwansteinu zničen.] (if: $date is &quot;Květen 1945&quot;)+(unless: $NeuschwansteinArt and $NeuschwansteinDocu is true)[4. května přicházíš do pohádkového zámku Neuschwanstein. Uvnitř najdeš spousty právě zabalených děl, s toho si vyvodíš, že je nacisté zrovna vyváželi, když tato oblast byla obsazena. Jsou tu obrazy, vzácný nábytek a další poklady přivezené z Francie. [[Prozkoumat ukradená díla a majetek]] [[Podívat se po užitečných dokumentech]]] (if: $NeuschwansteinArt and $NeuschwansteinDocu is true)+(if: $NeuschwansteinDone is not true)[Spokojeně se vracíš z Neuschwansteinu. Tvá práce tam se povedla, ale musíš myslet na další depozitáře a co jim hrozí. Nedávno nalezeným místem je Bernterode, ale ty teď máš důležitější misi - jet do Rakouska. V Altaussee totiž nejspíš skladují hodně důležitá díla - prozradil to jeden nacista výměnou za bezpečnou cestu do Paříže.(set: $NeuschwansteinDone to true)]
 [[Zpět-&gt;Křižovatka]]</tw-passagedata><tw-passagedata pid="32" name="Altaussee důl" tags="" position="600,600" size="100,100">(if: $Madonna and $Cycle and $Altarpiece is true)[(go-to: &quot;Závěr&quot;)]
 (else:)[V dole najdete obrovkské množství děl - asi 6 500 a dalších 1 500 cenných předmětů. Podívej se na některé zblízka:
 [[Gentský oltář]] [[Madona z Brugg]] [[Vyšebrodský oltář]]
@@ -421,13 +419,29 @@ Už je konec války, to znamená, že po pomoci s dokumentací se za několik m�
 
 V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům.
 
-(link: &quot;Zdroje&quot;)[(go-to: &quot;Zdroje&quot;)] (link: &quot;Bonus - mapa vygenerovaná AI podle této hry&quot;)[(goto-url: &quot;https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories&quot;)]](else:)[(text-style:&quot;fade-in-out&quot;)[&#39;&#39;Gratuluji!&#39;&#39;]
+(link: &quot;Zdroje&quot;)[(go-to: &quot;Zdroje&quot;)] (link: &quot;Bonus (vygenerováno AI)&quot;)[(go-to: &quot;Bonus (vygenerováno AI)&quot;)]
+
+&lt;div class=small-text&gt;
+2026
+Ines Brožíková
+
+Pomáhali:
+- táta (technická pomoc)
+- ClaudeAI (technická pomoc, pomoc s researchí, bonus)&lt;/div&gt;] (else:)[(text-style:&quot;fade-in-out&quot;)[&#39;&#39;Gratuluji!&#39;&#39;]
 
 Už je konec války, to znamená, že po pomoci s dokumentací se za několik měsíců vracíš domů, ke své práci v muzeu, kde tě pravděpodobně povýší. Díky tvé pomoci se nalezlo spousta depozitářů v několika zemích Evropy. Jen v Německu jich bylo kolem 1 500. &gt;&gt;(click-replace: &quot;&gt;&gt;&quot;)[
 
 V létě 1945 se k Monuments Men ještě pár lidí přidalo. Bylo to potřeba - nacisté celkem konfiskovali přibližně 20% umění, které tehdy v Evropě existovalo, což se odhaduje na 250 000 děl. Dodnes asi 100 000 děl nebylo navráceno majitelům. &gt;&gt;](click-replace: &quot;&gt;&gt;&quot;)[
 
-[[Zdroje]] [[Bonus - mapa vygenerovaná AI pro tuto hru]](set: $End to true)]]</tw-passagedata><tw-passagedata pid="37" name="Untitled Passage" tags="" position="1325,775" size="100,100">&lt;!DOCTYPE html&gt;
+[[Zdroje]] [[Bonus (vygenerováno AI)]](set: $End to true)
+
+&lt;div class=small-text&gt;
+2026
+Ines Brožíková
+
+Pomáhali:
+- táta (technická pomoc)
+- ClaudeAI (technická pomoc, pomoc s researchí, bonus)&lt;/div&gt;]]</tw-passagedata><tw-passagedata pid="37" name="Untitled Passage" tags="" position="1325,775" size="100,100">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -930,8 +944,8 @@ function positionTip(e) {
 }
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</tw-passagedata><tw-passagedata pid="38" name="Bonus - mapa vygenerovaná AI pro tuto hru" tags="" position="1150,900" size="100,100">&lt;iframe src=&quot;https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories&quot; width=100% height=950&gt;&lt;/iframe&gt;
-[[Zpět-&gt;Závěr]]</tw-passagedata></tw-storydata>
+&lt;/html&gt;</tw-passagedata><tw-passagedata pid="38" name="Bonus (vygenerováno AI)" tags="" position="1150,900" size="100,100">&lt;iframe src=&quot;https://grizzlines.github.io/unikovka2026/soubory/AI-map-art-repositories&quot; width=100% height=950&gt;&lt;/iframe&gt;
+[[Zpět-&gt;Závěr]]</tw-passagedata><tw-passagedata pid="39" name="[zeptat se na majetek" tags="" position="850,625" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

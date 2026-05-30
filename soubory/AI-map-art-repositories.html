@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nazi Art Repositories — Europe 1939–1945</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0f0e0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  font-family: 'Courier Prime', monospace;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Special Elite', serif;
+  color: #9a7c2a;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.subtitle {
+  color: #5a4a2a;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.map-outer {
+  width: 100%;
+  max-width: 1100px;
+  border-top: 5px solid #8c1a00;
+  border: 1px solid rgba(154,124,42,0.35);
+  border-top-width: 5px;
+  box-shadow: 0 0 0 4px #0f0e0c, 0 8px 60px rgba(0,0,0,0.85);
+  position: relative;
+}
+
+/* The real map sits as a background */
+.map-container {
+  position: relative;
+  width: 100%;
+  /* 
+    We use OpenStreetMap tiles via a lightweight Leaflet map.
+    The dots are placed via Leaflet markers so they sit
+    precisely on real geography.
+  */
+  height: 680px;
+  background: #8fa8b8;
+}
+
+#leaflet-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sepia / aged paper overlay on the map */
+#leaflet-map::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(180,140,60,0.18);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 500;
+}
+
+/* Custom marker styles */
+.marker-ingame {
+  background: none;
+  border: none;
+}
+.marker-other {
+  background: none;
+  border: none;
+}
+
+/* Tooltip */
+.tt {
+  position: absolute;
+  background: #120d06;
+  border: 1px solid #6a5218;
+  border-left: 3px solid #8c1a00;
+  color: #e8dfc8;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.78rem;
+  padding: 0.6rem 0.9rem;
+  max-width: 260px;
+  line-height: 1.55;
+  z-index: 1200;
+  pointer-events: none;
+  border-radius: 1px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.tt-name { color: #e8c840; font-weight: 700; display: block; margin-bottom: 0.15rem; font-size: 0.85rem; }
+.tt-ctry { color: #9a7c2a; font-size: 0.68rem; display: block; margin-bottom: 0.3rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.tt-info { color: #c8b890; }
+
+/* Legend */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 2.5rem;
+  margin-top: 1.2rem;
+  padding: 0.75rem 1.4rem;
+  border: 1px solid rgba(154,124,42,0.18);
+  max-width: 1100px;
+  width: 100%;
+}
+.li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; color: #8a7040; letter-spacing: 0.04em; }
+
+.map-note {
+  margin-top: 0.8rem;
+  font-size: 0.65rem;
+  color: #3a2e18;
+  letter-spacing: 0.08em;
+  text-align: center;
+  max-width: 1100px;
+}
+</style>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+</head>
+<body>
+
+<h1>Nazi Art Repositories — Europe 1939–1945</h1>
+<p class="subtitle">20 major known locations · hover for details</p>
+
+<div class="map-outer">
+  <div class="map-container">
+    <div id="leaflet-map"></div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="li">
+    <svg width="16" height="16" viewBox="0 0 16 16">
+      <polygon points="8,1 9.5,5.5 14.5,5.5 10.5,8.5 12,13 8,10 4,13 5.5,8.5 1.5,5.5 6.5,5.5" fill="#e8c840" stroke="#9a7020" stroke-width="1"/>
+    </svg>
+    Locations featured in the game
+  </div>
+  <div class="li">
+    <svg width="14" height="14" viewBox="0 0 14 14">
+      <circle cx="7" cy="7" r="5.5" fill="#8c1a00" stroke="#e04020" stroke-width="1.2"/>
+      <circle cx="7" cy="7" r="2.2" fill="#f06040"/>
+    </svg>
+    Other major repositories / looting centres
+  </div>
+</div>
+
+<p class="map-note">Hover over any marker for details · Map data © OpenStreetMap contributors</p>
+
+<!-- Leaflet JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// ── Init map centred on central Europe ──
+const map = L.map('leaflet-map', {
+  center: [50.5, 12],
+  zoom: 5,
+  minZoom: 4,
+  maxZoom: 7,
+  zoomControl: true,
+  scrollWheelZoom: true
+});
+
+// Stamen Toner-Lite gives a clean black-and-white base that we tint sepia
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors',
+  className: 'map-tiles'
+}).addTo(map);
+
+// ── SVG marker helpers ──
+function starIcon(size) {
+  size = size || 22;
+  const s = size, h = s/2;
+  const pts = [];
+  for (let i = 0; i < 10; i++) {
+    const r = i % 2 === 0 ? h * 0.95 : h * 0.42;
+    const a = (i * 36 - 90) * Math.PI / 180;
+    pts.push((h + r * Math.cos(a)).toFixed(2) + ',' + (h + r * Math.sin(a)).toFixed(2));
+  }
+  const svg = `<svg width="${s}" height="${s}" viewBox="0 0 ${s} ${s}" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="${h}" cy="${h}" r="${h-1}" fill="rgba(232,200,80,0.25)"/>
+    <polygon points="${pts.join(' ')}" fill="#e8c840" stroke="#9a6a10" stroke-width="1.2"/>
+  </svg>`;
+  return L.divIcon({
+    html: svg,
+    className: 'marker-ingame',
+    iconSize: [s, s],
+    iconAnchor: [h, h],
+    popupAnchor: [0, -h]
+  });
+}
+
+function dotIcon(size) {
+  size = size || 14;
+  const s = size, h = s/2;
+  const svg = `<svg width="${s}" height="${s}" viewBox="0 0 ${s} ${s}" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="${h}" cy="${h}" r="${h-0.5}" fill="#8c1a00" stroke="#e04020" stroke-width="1.4"/>
+    <circle cx="${h}" cy="${h}" r="${h*0.38}" fill="#f06040" opacity="0.9"/>
+  </svg>`;
+  return L.divIcon({
+    html: svg,
+    className: 'marker-other',
+    iconSize: [s, s],
+    iconAnchor: [h, h],
+    popupAnchor: [0, -h]
+  });
+}
+
+// ── Tooltip element ──
+const tt = document.createElement('div');
+tt.className = 'tt';
+tt.style.display = 'none';
+document.body.appendChild(tt);
+
+function showTip(e, name, country, info) {
+  tt.innerHTML = `<span class="tt-name">${name}</span><span class="tt-ctry">${country}</span><span class="tt-info">${info}</span>`;
+  tt.style.display = 'block';
+  moveTip(e.originalEvent);
+}
+function moveTip(e) {
+  let x = e.clientX + 16, y = e.clientY + 12;
+  const w = tt.offsetWidth, h = tt.offsetHeight;
+  if (x + w > window.innerWidth  - 10) x = e.clientX - w - 12;
+  if (y + h > window.innerHeight - 10) y = e.clientY - h - 12;
+  tt.style.left = x + 'px';
+  tt.style.top  = y + 'px';
+}
+function hideTip() { tt.style.display = 'none'; }
+
+function addMarker(lat, lng, name, country, info, isIngame) {
+  const icon = isIngame ? starIcon(24) : dotIcon(16);
+  const m = L.marker([lat, lng], { icon }).addTo(map);
+  m.on('mouseover', e => showTip(e, name, country, info));
+  m.on('mousemove', e => moveTip(e.originalEvent));
+  m.on('mouseout',  hideTip);
+
+  // Also add a label for ingame markers
+  if (isIngame) {
+    const label = L.marker([lat, lng], {
+      icon: L.divIcon({
+        html: `<span style="font-family:'Special Elite',serif;font-size:12px;font-weight:bold;color:#1a1208;white-space:nowrap;text-shadow:1px 1px 0 #e8dfc8,-1px -1px 0 #e8dfc8,1px -1px 0 #e8dfc8,-1px 1px 0 #e8dfc8;margin-left:14px;margin-top:-6px;display:block">${name}</span>`,
+        className: '',
+        iconSize: [0, 0],
+        iconAnchor: [0, 0]
+      })
+    }).addTo(map);
+  }
+}
+
+// ════════════════════════════════════════════════
+//  REPOSITORIES
+// ════════════════════════════════════════════════
+
+// ── IN-GAME (gold stars) ──
+addMarker(50.87, 8.02, 'Siegen', 'Germany',
+  'Copper mine used to store art from Aachen Cathedral, Cologne, and other Rhineland collections. Discovered by US forces, April 1945.',
+  true);
+
+addMarker(50.65, 10.18, 'Merkers', 'Germany',
+  'Kaiseroda salt mine. Held the entire Reichsbank gold reserve and hundreds of artworks from Berlin museums. Discovered by US 3rd Army, April 1945.',
+  true);
+
+addMarker(47.56, 10.75, 'Neuschwanstein', 'Germany — Bavaria',
+  'Fairytale castle used as a major ERR depot. Held 21,000+ objects looted from France, including entire Jewish private collections. Discovered May 1945.',
+  true);
+
+addMarker(47.64, 13.77, 'Altaussee', 'Austria',
+  "Salt mine in the Austrian Alps. Hitler's personal repository for the planned Führermuseum in Linz. Held 6,500+ works including the Ghent Altarpiece. Local miners defused Nazi demolition charges to save the art.",
+  true);
+
+// ── OTHER MAJOR REPOSITORIES (red dots) ──
+addMarker(48.86, 2.33, 'Jeu de Paume — Paris', 'France',
+  'Central ERR sorting depot in occupied Paris. Rose Valland secretly documented thousands of works passing through here. Over 20,000 objects processed 1940–44.',
+  false);
+
+addMarker(52.52, 13.40, 'Berlin — Flak Towers & Zoo Bunker', 'Germany',
+  'Flak towers and the Zoo bunker stored Kaiser Friedrich Museum collections during Allied bombing. Much was evacuated west before the Soviet advance.',
+  false);
+
+addMarker(48.14, 11.58, 'Munich', 'Germany',
+  'Major Nazi cultural centre. Central collection point for art destined for the Führermuseum. Göring\'s acquisitions passed through here.',
+  false);
+
+addMarker(47.63, 13.00, 'Berchtesgaden area', 'Germany — Bavaria',
+  "Hitler's mountain retreat. Large cache of looted art stored in the area including parts of Göring's personal collection. Discovered by US forces May 1945.",
+  false);
+
+addMarker(51.20, 3.22, 'Bruges — Church of Our Lady', 'Belgium',
+  "Michelangelo's Madonna of Bruges was looted by the Nazis in 1944. One of the very few works taken outside Italy during Michelangelo's lifetime. Recovered from Altaussee in 1945.",
+  false);
+
+addMarker(52.37, 4.90, 'Amsterdam', 'Netherlands',
+  'Occupied Netherlands was a major source of looted art. The ERR seized thousands of works from Jewish collections. The Mühlmann Task Force operated extensively here.',
+  false);
+
+addMarker(48.21, 16.37, 'Vienna', 'Austria',
+  'Major administrative centre for art looting. The Kunsthistorisches Museum and private Jewish collections were systematically stripped after the 1938 Anschluss.',
+  false);
+
+addMarker(50.06, 19.94, 'Kraków — Wawel Castle', 'Poland',
+  "Governor-General Hans Frank installed himself in Wawel Castle and stored looted Polish treasures there, including Leonardo da Vinci's Lady with an Ermine.",
+  false);
+
+addMarker(50.92, 13.88, 'Schloss Weesenstein', 'Germany — Saxony',
+  'Saxon castle used to store the famous Dresden Gallery collections evacuated ahead of Allied bombing. The paintings were later seized by Soviet troops.',
+  false);
+
+addMarker(49.14, 9.22, 'Heilbronn Salt Mine', 'Germany',
+  'Large salt mine storing Staatsgalerie Stuttgart collections and other regional German museum holdings. One of the major mine repositories in SW Germany.',
+  false);
+
+addMarker(48.31, 14.29, 'Linz — Führermuseum site', 'Austria',
+  "Hitler's planned Führermuseum was to be built in his hometown Linz. Thousands of works across Europe were specifically earmarked for it. The museum was never built.",
+  false);
+
+addMarker(47.90, 10.30, 'Buxheim Monastery', 'Germany — Bavaria',
+  'Bavarian monastery used to store over 1,000 objects looted by the ERR, including furniture and decorative arts from French châteaux.',
+  false);
+
+addMarker(43.77, 11.26, 'Florence', 'Italy',
+  'The Nazis systematically looted Florentine artworks before retreating in 1944. The Uffizi collections were partially evacuated but significant works were stolen.',
+  false);
+
+addMarker(41.49, 13.82, 'Monte Cassino', 'Italy',
+  'German paratroopers moved art from Monte Cassino monastery to the Vatican and then to Germany in 1943, claiming to protect it. Most was recovered after the war.',
+  false);
+
+addMarker(47.82, 13.04, 'Schloss Fischhorn', 'Austria',
+  "Castle near Zell am See used to store Göring's personal collection in the final months of the war. Allied troops found significant quantities of looted art here in 1945.",
+  false);
+
+addMarker(51.79, 10.94, 'Quedlinburg', 'Germany',
+  'A US soldier stole the Quedlinburg Treasures — medieval church relics and manuscripts — from a mine here in 1945. They were not recovered until the 1990s.',
+  false);
+
+addMarker(48.47, 15.99, 'Schloss Immendorf', 'Austria',
+  'Austrian castle storing Klimt paintings looted from the Lederer family. The SS burned the castle in May 1945 — several Klimt masterworks were destroyed in the fire.',
+  false);
+
+// ── Apply sepia filter to tiles via CSS ──
+const style = document.createElement('style');
+style.textContent = `
+  .map-tiles {
+    filter: sepia(60%) brightness(0.88) contrast(1.05) saturate(0.7);
+  }
+  .leaflet-control-zoom a {
+    background: #1a1510 !important;
+    color: #9a7c2a !important;
+    border-color: #6a5218 !important;
+    font-family: 'Courier Prime', monospace !important;
+  }
+  .leaflet-control-zoom a:hover {
+    background: #2a2010 !important;
+    color: #e8c840 !important;
+  }
+  .leaflet-control-attribution {
+    background: rgba(15,14,12,0.75) !important;
+    color: #5a4a2a !important;
+    font-family: 'Courier Prime', monospace !important;
+    font-size: 9px !important;
+  }
+  .leaflet-control-attribution a { color: #6a5a2a !important; }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>

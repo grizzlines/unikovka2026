@@ -83,7 +83,7 @@ Založená roku 1940, ERR byla organizace nacistické strany, která sloužila k
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ghent_Altarpiece_Google_Art_Project.jpg/3840px-Ghent_Altarpiece_Google_Art_Project.jpg" class=img width=100%>
 
 ''(text-style:"underline")[Gentský oltář]''<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Ghent_altarpiece_at_Altaussee.jpg" class=img-right width=62.5%>
-* 15. století - pozdní gotika
+* 15. století - pozdní gotika / raná renesance
 * bratři ''van Eyckové''
 3,5 x 5 m veliký oltář z 12 panelů vznikl pro ''katedrálu sv. Bavona v Gentu'' v Belgii. Z té byl několikrát přemístěn a občas bylo pár panelů odcizeno, ale vždy se vrátily. Od roku 1940 do roku 1945 prostřídal 6 lokací - z Belgie do zámku v Pau, poté do Paříže, do Neuschwansteinu, a z Altaussee byl převezen do Mnichova (click: "Mnichova")[(Munich Central Collecting Point - tam se po válce díla zdokumentovala a posílala původnímu majiteli)] a zpátky do Gentu. (set: $Altarpiece to true)
 [[Zpět->Altaussee důl]] 
@@ -940,7 +940,7 @@ V této únikové hře budeš právě členem MFAA a tvým úkolem bude zachrán
 
 :: Úvodní stránka {"position":"275,50","size":"100,100"}
 <div class="title">(text-style:"underline")[''PO STOPÁCH UMĚNÍ 1944 -1945'']</div>
-* délka: 15 - 20 min 
+* délka: 10 - 20 min 
 <div class="small-text">
 * tato hra nemá špatný konec, má jen jednu variantu závěru, a to aby mohla zůstat historicky co nejpřesnější
 * přesto se nedá spolehnout na pravdivost všech informací, hlavně co se týče datace
@@ -1108,4 +1108,4 @@ tw-link:hover {
 
 .small-text {
   font-size: 0.8rem;
-}
+}and
